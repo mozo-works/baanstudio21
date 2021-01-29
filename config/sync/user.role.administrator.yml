@@ -1,0 +1,11 @@
+uuid: ab29225b-b589-4c5d-85de-aa187cb8e7a0
+langcode: ko
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Om6FEO7vZZMkPIbVvfxtdkWerQ2PvQM4sWUd6Q3ZnfI
+id: administrator
+label: 관리자
+weight: 2
+is_admin: true
+permissions: {  }

@@ -1,0 +1,10 @@
+uuid: 70ba8f64-412b-4c80-852c-772ca7a743a3
+langcode: ko
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7klS5IWXrwzVaPpYZFAs6wcx8U2FF1X73OfrtTsvuvE
+id: fallback
+label: '대체 날짜 형식'
+locked: true
+pattern: 'D, m/d/Y - H:i'

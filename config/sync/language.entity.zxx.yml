@@ -1,0 +1,11 @@
+uuid: 5c54bd98-3411-481f-826a-a74753f4a14f
+langcode: ko
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 35CefWbnzaiytcg3acexxz_GTvuwIjYd_ZTcmmR-tXA
+id: zxx
+label: '적용 불가'
+direction: ltr
+weight: 3
+locked: true

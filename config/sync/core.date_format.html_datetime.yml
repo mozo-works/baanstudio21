@@ -1,0 +1,10 @@
+uuid: 1c1c3ee0-3f19-4bdf-82e2-bde3112530bb
+langcode: ko
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jxfClwZIRXIdcvMrE--WkcZxDGUVoOIE3Sm2NRZlFuE
+id: html_datetime
+label: 'HTML 날짜시간'
+locked: true
+pattern: 'Y-m-d\TH:i:sO'

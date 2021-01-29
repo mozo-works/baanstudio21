@@ -1,0 +1,13 @@
+uuid: 0fa83af1-fb50-47bd-b5a1-cf3ee6a00654
+langcode: ko
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
+id: node_make_unsticky_action
+label: '콘텐츠 고정 풀기'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

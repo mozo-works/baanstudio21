@@ -1,0 +1,13 @@
+uuid: c772343a-8333-4714-9282-c78ac7c04bf8
+langcode: ko
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: N0RDBTqiK4dKoN4p4oW2j0SGWycdHyALUe9M-Ofp89U
+id: node_promote_action
+label: '첫 페이지에 콘텐츠 노출하기'
+type: node
+plugin: node_promote_action
+configuration: {  }

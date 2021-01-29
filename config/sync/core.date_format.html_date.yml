@@ -1,0 +1,10 @@
+uuid: bef77059-0225-47d0-9c4e-99e58d20399d
+langcode: ko
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EOQltUQPmgc6UQ2rcJ4Xi_leCEJj5ui0TR-12duS-Tk
+id: html_date
+label: 'HTML 날짜'
+locked: true
+pattern: Y-m-d

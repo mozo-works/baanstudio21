@@ -1,0 +1,14 @@
+uuid: 6d701372-fd61-4398-8e3e-0413b12b5731
+langcode: ko
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: k3aUaZXGDuhkek2TZIee0PApOPTvYZLadziekdyHA5A
+id: user_search
+label: 사용자
+path: user
+weight: 0
+plugin: user_search
+configuration: {  }
