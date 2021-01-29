@@ -1,0 +1,10 @@
+uuid: fad79388-7479-4e06-a420-a4e53dce4b9e
+langcode: ko
+status: true
+dependencies: {  }
+id: artists
+label: '관련 예술가'
+icon_uuid: null
+icon_default: null
+description: '프로젝트에 참여하거나 관련있는 예술가 정보입니다.'
+behavior_plugins: {  }

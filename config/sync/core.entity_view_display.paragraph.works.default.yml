@@ -1,0 +1,31 @@
+uuid: 58cb7b4e-9751-4921-b370-482ff38beab8
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.works.field_media
+    - field.field.paragraph.works.field_work_type
+    - paragraphs.paragraphs_type.works
+id: paragraph.works.default
+targetEntityType: paragraph
+bundle: works
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_work_type:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: bfc2c63c-63e5-4b7e-8e9c-9e7963b67584
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_month
+    - node.type.project
+  module:
+    - datetime
+id: node.project.field_year_month
+field_name: field_year_month
+entity_type: node
+bundle: project
+label: 연도-월
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

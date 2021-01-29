@@ -1,0 +1,19 @@
+uuid: 95f899e3-f51c-4cbf-9fd7-1ef5927d01cd
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.project
+id: node.project.field_client
+field_name: field_client
+entity_type: node
+bundle: project
+label: 고객
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

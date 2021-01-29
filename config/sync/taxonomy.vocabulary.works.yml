@@ -1,0 +1,8 @@
+uuid: c1045467-7572-4139-b3b0-3fd04f4b66f4
+langcode: ko
+status: true
+dependencies: {  }
+name: '작업 유형'
+vid: works
+description: '프로젝트 작업 결과물 유형입니다.'
+weight: 0

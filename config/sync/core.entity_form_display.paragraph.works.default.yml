@@ -1,0 +1,35 @@
+uuid: 333ebfd3-64a2-4c48-a761-fb58606381e3
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.works.field_media
+    - field.field.paragraph.works.field_work_type
+    - paragraphs.paragraphs_type.works
+  module:
+    - media_library
+id: paragraph.works.default
+targetEntityType: paragraph
+bundle: works
+mode: default
+content:
+  field_media:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_work_type:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,10 @@
+uuid: 4571f0fa-53a2-4c11-af64-78d9c6e282a6
+langcode: ko
+status: true
+dependencies: {  }
+id: works
+label: 작업
+icon_uuid: null
+icon_default: null
+description: '프로젝트 작업 결과물입니다.'
+behavior_plugins: {  }

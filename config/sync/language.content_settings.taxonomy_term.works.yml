@@ -1,0 +1,11 @@
+uuid: 4814b8aa-2f3a-47f5-bc40-3f61486f4aba
+langcode: ko
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.works
+id: taxonomy_term.works
+target_entity_type_id: taxonomy_term
+target_bundle: works
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,34 @@
+uuid: 7f2901c1-1897-4efa-8e5f-86bccc4068ee
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.artists.field_link
+    - field.field.paragraph.artists.field_name
+    - paragraphs.paragraphs_type.artists
+  module:
+    - link
+id: paragraph.artists.default
+targetEntityType: paragraph
+bundle: artists
+mode: default
+content:
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

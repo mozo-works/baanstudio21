@@ -1,0 +1,43 @@
+uuid: d41f0267-b947-4e2b-87b0-02cd8592c774
+langcode: ko
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.body
+    - field.field.node.project.field_artists
+    - field.field.node.project.field_client
+    - field.field.node.project.field_curator
+    - field.field.node.project.field_venue
+    - field.field.node.project.field_works
+    - field.field.node.project.field_year_month
+    - node.type.project
+  module:
+    - text
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_artists: true
+  field_client: true
+  field_curator: true
+  field_venue: true
+  field_works: true
+  field_year_month: true
+  langcode: true

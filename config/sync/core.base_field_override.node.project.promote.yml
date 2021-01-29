@@ -1,0 +1,22 @@
+uuid: cdc0d295-bc84-4a0c-996c-83548e5ba171
+langcode: ko
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.promote
+field_name: promote
+entity_type: node
+bundle: project
+label: '첫 페이지에 홍보하기'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 켜기
+  off_label: 끄기
+field_type: boolean

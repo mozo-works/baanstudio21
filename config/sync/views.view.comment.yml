@@ -18,7 +18,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: 마스터
+    display_title: Master
     position: 0
     display_options:
       access:
@@ -39,13 +39,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: 필터
+          submit_button: Filter
           reset_button: false
-          reset_button_label: 재설정
-          exposed_sorts_label: 정렬기준
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
-          sort_desc_label: 설명
+          sort_desc_label: Desc
       pager:
         type: full
         options:
@@ -60,12 +60,12 @@ display:
             last: '마지막 페이지 »'
           expose:
             items_per_page: false
-            items_per_page_label: '페이지 당 항목 수'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- 모두 -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: 건너뛰기
+            offset_label: Offset
           quantity: 9
       style:
         type: table
@@ -179,7 +179,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: 액션
+          action_title: Action
           include_exclude: include
           selected_actions:
             - comment_delete_action
@@ -323,7 +323,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 작성자
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -452,7 +452,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 갱신됨
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -519,7 +519,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 작업
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -767,7 +767,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: 언어
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1048,7 +1048,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: 언어
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -1132,7 +1132,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: 액션
+          action_title: Action
           include_exclude: include
           selected_actions:
             - comment_delete_action
@@ -1276,7 +1276,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 작성자
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -1405,7 +1405,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 갱신됨
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -1472,7 +1472,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 작업
+          label: Operations
           exclude: false
           alter:
             alter_text: false
