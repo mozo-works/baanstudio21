@@ -11,16 +11,16 @@ echo "mariadb-server-10.5 mysql-server/root_password_again password root" | debc
 apt-get install -y -qq mariadb-server
 
 echo "[mariadb] create user and database"
-mysql --password=root -e "CREATE DATABASE aihub_manager CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-mysql --password=root -e "GRANT ALL ON aihub_manager.* TO vagrant@localhost IDENTIFIED BY 'vagrant'; FLUSH PRIVILEGES;"
+mysql --password=root -e "CREATE DATABASE baanstudio21 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql --password=root -e "GRANT ALL ON baanstudio21.* TO vagrant@localhost IDENTIFIED BY 'vagrant'; FLUSH PRIVILEGES;"
 
 cp /vagrant/provision/config/my.cnf /home/vagrant/.my.cnf
 chown vagrant:vagrant /home/vagrant/.my.cnf
 
-FILE=/vagrant/dump/aihub_manager-dev.sql.gz
+FILE=/vagrant/dump/baanstudio21-dev.sql.gz
 if [ -f "$FILE" ]; then
-    echo "[mariadb] $FILE exists and restoring aihub_manager database..."
-    gunzip -c $FILE | mysql aihub_manager
+    echo "[mariadb] $FILE exists and restoring baanstudio21 database..."
+    gunzip -c $FILE | mysql baanstudio21
 else
     echo "[mariadb] $FILE does not exist. Install drupal by yourself."
 fi
