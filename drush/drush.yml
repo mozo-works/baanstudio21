@@ -1,0 +1,51 @@
+# https://raw.githubusercontent.com/drush-ops/drush/10.x/examples/example.drush.yml
+
+options:
+  uri: 'http://localhost:8080'
+
+command:
+  sql:
+    dump:
+      options:
+        structure-tables-key: common
+        skip-tables-key: common
+    sync:
+      options:
+        structure-tables-key: common
+        skip-tables-key: common
+        create-db: true
+  core:
+    rsync:
+      options:
+        verbose: true
+
+sql:
+  tables:
+    common:
+      - user
+      - permissions
+      - role_permissions
+      - role
+  structure-tables:
+    common:
+      - cache
+      - 'cache_*'
+      - history
+      - 'search_*'
+      - 'sessions'
+      - 'watchdog'
+      - 'webprofiler'
+  skip-tables:
+    common:
+      - 'migration_*'
+
+ssh:
+  options: '-o PasswordAuthentication=no -i ~/.ssh/kyeol.pem'
+  pipefail: 'set -o pipefail; '
+
+# notify:
+  # Notify when command takes more than 30 seconds.
+# duration: 30
+  # Specify a command to run. Defaults to Notification Center (OSX) or libnotify (Linux)
+# cmd: /path/to/program
+  # See src/Commands/core/NotifyCommands.php for more configuration settings.

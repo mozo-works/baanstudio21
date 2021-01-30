@@ -11,7 +11,9 @@ curl https://rclone.org/install.sh | bash
 
 echo 'eval "$(ssh-agent -s)"' >> /home/vagrant/.profile
 echo 'ssh-add ' >> /home/vagrant/.profile
+echo "if test -f '/vagrant/.env '; then" >> /home/vagrant/.profile
 echo "export $(egrep -v '^#' /vagrant/.env | xargs)" >> /home/vagrant/.profile
+echo "fi" >> /home/vagrant/.profile
 
 echo "install mailhog"
 curl -LO https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_amd64

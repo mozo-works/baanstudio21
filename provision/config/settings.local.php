@@ -16,10 +16,10 @@ $databases['default']['default'] = [
   'driver' => 'mysql',
 ];
 
+$settings['hash_salt'] = 'vNYSZt52CdlIsneqCs6ZeYsxJnnlFcqId4aBHfKcJkmupzaEX38SCTD4b_Bh4SdzjnTBjry0Gg';
 $settings['config_sync_directory'] = '../config/sync';
 
 $settings['trusted_host_patterns'] = [
-  '^aidatamgt\.aihub\.or\.kr',
   '^localhost$',
 ];
 

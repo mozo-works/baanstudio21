@@ -1,0 +1,44 @@
+# https://raw.githubusercontent.com/drush-ops/drush/10.x/examples/example.site.yml
+
+local:
+  uri: http://localhost:8080
+  root: /vagrant/web
+  paths:
+    - files: sites/default/files
+  command:
+    sql:
+      sync:
+        options:
+          structure-tables-key: common
+          skip-tables-key: common
+          target-dump: /vagrant/dump/prod.sql.gz
+
+stage:
+  uri: http://kyeol.durumi.io
+  root: /var/www/baanstudio21
+  host: 13.124.40.13
+  user: ubuntu
+  os: Linux
+  paths:
+   - files: sites/default/files
+  command:
+    sql:
+      sync:
+        options:
+          structure-tables-key: common
+          skip-tables-key: common
+
+prod:
+  uri:
+  root:
+  host:
+  user: ubuntu
+  os: Linux
+  paths:
+   - files: sites/default/files
+  command:
+    sql:
+      dump:
+        options:
+          structure-tables-key: common
+          skip-tables-key: common

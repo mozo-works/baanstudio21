@@ -17,6 +17,9 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
   end
 
+  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
+  config.vm.provision "file", source: "~/.ssh/id_rsa", destination: ".ssh/"
+  config.vm.provision "file", source: "~/.ssh/kyeol.pem", destination: ".ssh/"
   config.vm.provision "shell", path: "provision/bootstrap.sh"
   config.vm.provision "shell", path: "provision/mariadb-10.5.sh"
   config.vm.provision "shell", path: "provision/apache2-php7.4.sh"
