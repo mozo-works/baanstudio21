@@ -1,0 +1,20 @@
+uuid: 643193f8-77d8-4d78-a7f6-993604a65e2b
+langcode: ko
+status: true
+dependencies:
+  theme:
+    - radix
+_core:
+  default_config_hash: sBMSSrWtP58IZaz1i3-MJ9yq_y32w1nc7N5DZJmt-4M
+id: radix_primary_admin_actions
+theme: radix
+region: navbar_branding
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

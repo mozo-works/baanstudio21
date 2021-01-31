@@ -1,0 +1,22 @@
+uuid: 38228246-b02c-4fe6-8c9f-701c0455c022
+langcode: ko
+status: true
+dependencies:
+  theme:
+    - bs21
+_core:
+  default_config_hash: ra6f6AXShbzKP9r6uPc9cfCx2KuomlPqmt1WWPUuDf0
+id: bs21_primary_local_tasks
+theme: bs21
+region: header
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

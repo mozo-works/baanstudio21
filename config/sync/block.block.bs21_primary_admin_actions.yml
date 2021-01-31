@@ -1,0 +1,20 @@
+uuid: 90c4a008-519c-4fd2-912b-50297a84dd95
+langcode: ko
+status: true
+dependencies:
+  theme:
+    - bs21
+_core:
+  default_config_hash: sBMSSrWtP58IZaz1i3-MJ9yq_y32w1nc7N5DZJmt-4M
+id: bs21_primary_admin_actions
+theme: bs21
+region: header
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

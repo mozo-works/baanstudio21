@@ -1,0 +1,22 @@
+uuid: 8e209c76-9428-4379-991a-817c98c70b05
+langcode: ko
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs21
+_core:
+  default_config_hash: KfyaTPRJEcAyy2e5AxEfWQnuHcn4WrfvcWek7lSmHZQ
+id: bs21_messages
+theme: bs21
+region: header
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

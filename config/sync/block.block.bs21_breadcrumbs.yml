@@ -1,0 +1,22 @@
+uuid: 33df4d50-1851-4dea-b4f9-2f91927797f0
+langcode: ko
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs21
+_core:
+  default_config_hash: XMsRP1YhWAcorbrFWZglMYJ_SgWHyF3fyCh5vDXaUN4
+id: bs21_breadcrumbs
+theme: bs21
+region: header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

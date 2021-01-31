@@ -1,0 +1,22 @@
+uuid: 26377489-61bb-4955-8621-46920f20cb75
+langcode: ko
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs21
+_core:
+  default_config_hash: ygYOxNV388KKajE2oZsiM9hejoed0gu5WeXcLR_zfzM
+id: bs21_powered
+theme: bs21
+region: footer
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

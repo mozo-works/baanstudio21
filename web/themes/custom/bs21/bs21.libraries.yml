@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/bs21.style.css: {}
+  js:
+    assets/js/bs21.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,5 @@
+# Schema for the configuration files of the bs21 theme.
+
+bs21.settings:
+  type: theme_settings
+  label: 'bs21 settings'

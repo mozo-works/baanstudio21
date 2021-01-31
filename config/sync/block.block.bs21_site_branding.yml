@@ -1,0 +1,25 @@
+uuid: f4292685-2dc3-4dce-bc7d-b3a433a16d49
+langcode: ko
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs21
+_core:
+  default_config_hash: sYjScJ6uW1UvGZ-G3AtTcZmPoOiQJtndHqamm8FAFgU
+id: bs21_site_branding
+theme: bs21
+region: navbar_branding
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

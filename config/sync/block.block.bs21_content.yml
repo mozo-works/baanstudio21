@@ -1,0 +1,22 @@
+uuid: 12365b0c-6b9b-4d3a-90d1-80e88c7bf0ce
+langcode: ko
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs21
+_core:
+  default_config_hash: BL6Gcw5Us0zai1ADadlNYLxlEblMedc_3C3lF0PjtCE
+id: bs21_content
+theme: bs21
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

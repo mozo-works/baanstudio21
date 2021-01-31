@@ -1,0 +1,22 @@
+uuid: 09136176-6eef-47bb-931f-3b78b9c145cd
+langcode: ko
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bs21
+_core:
+  default_config_hash: kZCp4h7S-QCo6ENXEyv5I6jbxtIFGrDT8hDDFUfuNjY
+id: bs21_help
+theme: bs21
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

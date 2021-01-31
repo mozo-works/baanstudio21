@@ -1,0 +1,22 @@
+uuid: d7b88fe6-5f18-4c47-b665-3eb6c8e39c6b
+langcode: ko
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - radix
+_core:
+  default_config_hash: kZCp4h7S-QCo6ENXEyv5I6jbxtIFGrDT8hDDFUfuNjY
+id: radix_help
+theme: radix
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

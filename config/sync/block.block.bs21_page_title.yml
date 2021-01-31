@@ -1,0 +1,20 @@
+uuid: 60f27588-6913-476c-b9fb-ac8db2ced7da
+langcode: ko
+status: true
+dependencies:
+  theme:
+    - bs21
+_core:
+  default_config_hash: WImvmaBdDpwIqobqbDWebBnyxssRvrNEnZSQbOsvOe4
+id: bs21_page_title
+theme: bs21
+region: header
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
