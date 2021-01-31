@@ -78,8 +78,8 @@ content:
     weight: 0
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
+      timezone_override: Asia/Seoul
+      format_type: html_month
     third_party_settings: {  }
     type: datetime_default
     region: content

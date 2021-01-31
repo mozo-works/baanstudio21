@@ -18,7 +18,15 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
+  {% if view_mode == 'teaser' %}
+  <a href="{{ url }}" rel="bookmark">
+  {% endif %}
   {% block content %}
     {{ content }}
   {% endblock %}
+
+  {% if view_mode == 'teaser' %}
+    {{ label }}
+  </a>
+  {% endif %}
 </article>

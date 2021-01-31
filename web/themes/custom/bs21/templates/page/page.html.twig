@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="container-fluid page">
+  <header class="page--header">
+  {% embed '@bs21/navbar/navbar.twig' with {
+    placement: 'sticky-top'
+  } %}
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        {{ page.navbar_left }}
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+  </header>
+
+  <main class="pb-5">
+    {% if page.header %}
+      <header class="page--header mb-3">
+        <div class="container-fluid p-0">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+
+    {% if page.content %}
+      <div class="page--content">
+        <div class="container-fluid p-0">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  <footer id="site-footer" class="page--footer">
+    <span class="d-inline-block float-end">위로</span>
+    <span class="d-inline-block">© Baan Studio</span>
+  </footer>
+
+</div>

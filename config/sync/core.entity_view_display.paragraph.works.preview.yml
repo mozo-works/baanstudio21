@@ -1,0 +1,27 @@
+uuid: bacfe1ce-bebe-4bca-99ba-45eb856e1ed3
+langcode: ko
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.works.field_media
+    - field.field.paragraph.works.field_work_type
+    - paragraphs.paragraphs_type.works
+  module:
+    - media
+id: paragraph.works.preview
+targetEntityType: paragraph
+bundle: works
+mode: preview
+content:
+  field_media:
+    type: media_thumbnail
+    weight: 0
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_work_type: true

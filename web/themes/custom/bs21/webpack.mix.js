@@ -29,7 +29,7 @@ mix
  */
 mix.browserSync({
   proxy: proxy,
-  files: ['assets/js/**/*.js', 'assets/css/**/*.css'],
+  files: ['assets/js/**/*.js', 'assets/css/**/*.css', 'templates/**/*.twig', 'src/components/**/*'],
   stream: true,
   open: false
 });

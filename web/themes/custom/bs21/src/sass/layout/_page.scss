@@ -1,0 +1,33 @@
+// Page: Layout
+// -----------------------------------------------------------------------------
+
+.container-fluid.page {
+    padding: 40px 40px 0 40px;
+}
+
+.active {
+    border-bottom: 1px solid $gray-600;
+    padding-bottom: 3px;
+}
+
+.card--project {
+    margin-bottom: 18px;
+    span {
+        margin-top: 5px;
+    }
+}
+.same-height {
+    display: table; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+    .col {
+        display: table-cell;
+    }
+}
+
+.block--content {
+    padding-top: 133px;
+}
+
+.navbar--secondary {
+    margin-bottom: 55px;
+}

@@ -1,13 +1,26 @@
 // Bootstrap
 // -----------------------------------------------------------------------------
+/*!
+ * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
 @import "~bootstrap/scss/functions";
-@import "base/variables";
+@import "~bootstrap/scss/variables";
+@import "custom-vars";
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/print";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
-@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/forms";
@@ -15,25 +28,30 @@
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/button-group";
-@import "~bootstrap/scss/input-group";
-@import "~bootstrap/scss/custom-forms";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
 @import "~bootstrap/scss/breadcrumb";
 @import "~bootstrap/scss/pagination";
 @import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/jumbotron";
 @import "~bootstrap/scss/alert";
 @import "~bootstrap/scss/progress";
-@import "~bootstrap/scss/media";
 @import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/tooltip";
 @import "~bootstrap/scss/popover";
 @import "~bootstrap/scss/carousel";
-@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/spinners";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
 
 // Base
 // -----------------------------------------------------------------------------
@@ -45,6 +63,7 @@
 
 // Layout
 // -----------------------------------------------------------------------------
+@import "layout/page";
 @import "layout/page.header";
 @import "layout/page.content";
 @import "layout/page.footer";
@@ -57,4 +76,4 @@
 // -----------------------------------------------------------------------------
 @import "block/block";
 @import "content/node.page";
-@import "content/node.article";
+@import "content/node.project";

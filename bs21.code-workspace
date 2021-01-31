@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "themes-radix",
+			"path": "web/themes/contrib/radix"
+		},
+		{
+			"name": "themes-custom-bs21",
+			"path": "web/themes/custom/bs21"
+		},
+		{
+			"name": "bs21-includes",
+			"path": "web/themes/custom/bs21/includes"
+		},
+		{
+			"name": "bs21-templates",
+			"path": "web/themes/custom/bs21/templates"
+		},
+		{
+			"name": "bs21-src",
+			"path": "web/themes/custom/bs21/src"
+		},
+		{
+			"name": "project-root",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
