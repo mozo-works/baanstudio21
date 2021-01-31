@@ -13,4 +13,4 @@ cd /vagrant && composer install -o
 cp -r /vagrant/provision/config/settings* /vagrant/web/sites/default/
 cp -r /vagrant/provision/config/theme-dev.services.yml /vagrant/web/sites/default/
 chmod u+w /vagrant/web/sites/default
-mkdir -p /vagrant/web/sites/default/files && chmod -R 777 /vagrant/web/sites/default/files
+mkdir -p /vagrant/web/sites/default/files/translations && chmod -R 777 /vagrant/web/sites/default/files
