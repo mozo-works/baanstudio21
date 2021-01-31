@@ -40,7 +40,7 @@ sql:
       - 'migration_*'
 
 ssh:
-  options: '-o PasswordAuthentication=no -i ~/.ssh/kyeol.pem'
+  # options: '-o PasswordAuthentication=no -i ~/.ssh/kyeol.pem'
   pipefail: 'set -o pipefail; '
 
 # notify:

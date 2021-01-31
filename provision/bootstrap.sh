@@ -17,9 +17,9 @@ echo "fi" >> /home/vagrant/.profile
 
 echo "install mailhog"
 curl -LO https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_amd64
-sudo mv MailHog_linux_amd64 /usr/local/bin/mailhog
-sudo chmod +x /usr/local/bin/mailhog
-sudo tee /etc/systemd/system/mailhog.service <<EOL
+mv MailHog_linux_amd64 /usr/local/bin/mailhog
+chmod +x /usr/local/bin/mailhog
+tee /etc/systemd/system/mailhog.service <<EOL
 [Unit]
 Description=Mailhog
 After=network.target
@@ -29,5 +29,5 @@ ExecStart=/usr/bin/env /usr/local/bin/mailhog > /dev/null 2>&1 &
 [Install]
 WantedBy=multi-user.target
 EOL
-sudo systemctl daemon-reload
-sudo systemctl enable mailhog && sudo systemctl start mailhog
+systemctl daemon-reload
+systemctl enable mailhog && systemctl start mailhog

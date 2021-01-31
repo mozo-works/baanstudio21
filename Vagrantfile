@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "ubuntu/focal64"
   config.vm.network "forwarded_port", guest: 80, host: 8080, id: "apache2"
   config.vm.network "forwarded_port", guest: 3000, host: 3000, id: "browserSync"
   config.vm.network "forwarded_port", guest: 8025, host: 8025, id: "mailhog"
@@ -24,5 +24,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "provision/mariadb-10.5.sh"
   config.vm.provision "shell", path: "provision/apache2-php7.4.sh"
   config.vm.provision "shell", path: "provision/nvm.sh", privileged: false
+  config.vm.provision "shell", path: "provision/configure.sh", privileged: false
   config.vm.provision "shell", path: "provision/check.sh"
 end

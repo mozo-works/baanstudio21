@@ -5,6 +5,8 @@ local:
   root: /vagrant/web
   paths:
     - files: sites/default/files
+  env-vars:
+    DRUPAL_ENV: dev
   command:
     sql:
       sync:
@@ -15,12 +17,16 @@ local:
 
 stage:
   uri: http://kyeol.durumi.io
-  root: /var/www/baanstudio21
+  root: /var/www/baanstudio21/web
   host: 13.124.40.13
   user: ubuntu
   os: Linux
   paths:
    - files: sites/default/files
+  ssh:
+    options: '-o PasswordAuthentication=no -i ~/.ssh/kyeol.pem'
+  env-vars:
+    DRUPAL_ENV: stage
   command:
     sql:
       sync:
