@@ -1,0 +1,15 @@
+uuid: e47cbfcd-2057-45d5-9176-dc27955243fe
+langcode: ko
+status: true
+dependencies: {  }
+name: small
+label: 800x600
+effects:
+  d3c2b17e-87dd-4dad-8b6d-a85ee8bfb7fd:
+    uuid: d3c2b17e-87dd-4dad-8b6d-a85ee8bfb7fd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 600
+      anchor: center-center

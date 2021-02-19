@@ -34,7 +34,7 @@ SELECT
 		WHERE
 			a.nid = n.nid
 		GROUP BY nid
-		
+
 	) AS 'artists'
 	, p.field_curator_value AS 'curator'
 FROM
@@ -45,4 +45,19 @@ WHERE
 	n.type = 'project'
 ORDER BY
 	p.field_year_value DESC;
+```
+
+## 이미지 비율
+
+```
+658x494 비율 1.331983806
+4x3 비율 1.333333333
+3x2 비율 1.5
+원본 3000x2250
+
+xs: < 576px => x_small:600x450
+sm: > 576px => small:800x600
+md: > 768px => medium:1000x750
+lg: > 992px => large:1200x900
+xlg:>1200px => x_large:2400x1800
 ```

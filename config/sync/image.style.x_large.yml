@@ -1,0 +1,15 @@
+uuid: deb711c8-549a-4f8a-81e8-58e249e71131
+langcode: ko
+status: true
+dependencies: {  }
+name: x_large
+label: 2400×1800
+effects:
+  82dccd3e-9e92-4983-9bf8-a504146c981d:
+    uuid: 82dccd3e-9e92-4983-9bf8-a504146c981d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2400
+      height: 1800
+      anchor: center-center

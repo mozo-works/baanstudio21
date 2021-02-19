@@ -7,20 +7,18 @@ dependencies:
     - field.field.paragraph.works.field_media
     - field.field.paragraph.works.field_work_type
     - paragraphs.paragraphs_type.works
-  module:
-    - media
 id: paragraph.works.preview
 targetEntityType: paragraph
 bundle: works
 mode: preview
 content:
   field_media:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 0
     label: visually_hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: default
+      link: false
     third_party_settings: {  }
     region: content
 hidden:
