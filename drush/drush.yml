@@ -38,6 +38,3 @@ sql:
 
 ssh:
   pipefail: 'set -o pipefail; '
-
-notify:
-  duration: 10
