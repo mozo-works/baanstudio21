@@ -26,10 +26,9 @@ libraries-override:
 ckeditor_stylesheets:
   - assets/css/bs21.style.css
 
-component-libraries:
-  bs21:
-    paths:
-      - ./src/components
+components:
+  namespaces:
+    bs21: src/components
 
 # Information added by Drupal.org packaging script on 2020-09-30
 version: '8.x-4.10'
