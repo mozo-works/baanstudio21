@@ -1,18 +1,16 @@
-uuid: 52ef87bd-2c25-4955-a90b-defcc2cccb06
+uuid: f82edfb3-181c-4b59-a984-eb36612f9993
 langcode: ko
 status: true
 dependencies:
   module:
     - node
-id: node.field_venue
-field_name: field_venue
+    - text
+id: node.field_info
+field_name: field_info
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

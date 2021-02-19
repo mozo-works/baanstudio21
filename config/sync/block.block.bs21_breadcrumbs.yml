@@ -1,6 +1,6 @@
 uuid: 33df4d50-1851-4dea-b4f9-2f91927797f0
 langcode: ko
-status: true
+status: false
 dependencies:
   module:
     - system

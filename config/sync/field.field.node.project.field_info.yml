@@ -1,0 +1,24 @@
+uuid: 00065184-f3e5-41a7-b957-bb55e87d8ef0
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info
+    - node.type.project
+  module:
+    - text
+id: node.project.field_info
+field_name: field_info
+entity_type: node
+bundle: project
+label: 정보
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: "<ul>\r\n\t<li>Year:&nbsp;</li>\r\n\t<li>Venue:&nbsp;</li>\r\n\t<li>Types:&nbsp;&nbsp;</li>\r\n\t<li>Client:</li>\r\n\t<li>Artist:&nbsp;</li>\r\n</ul>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

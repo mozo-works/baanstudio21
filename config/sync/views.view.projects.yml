@@ -162,7 +162,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: '프로젝트 목록'
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }
