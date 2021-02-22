@@ -1,5 +1,11 @@
 // Custom style for the Node component.
 // -----------------------------------------------------------------------------
 .node {
-
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  &.project--full .image__field-media-image {
+    margin-bottom: 1.5rem;
+  }
 }

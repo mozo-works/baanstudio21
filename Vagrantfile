@@ -4,6 +4,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/focal64"
   config.vm.network "forwarded_port", guest: 80, host: 8080, id: "apache2"
+  config.vm.network "forwarded_port", guest: 8888, host: 8888, id: "drush-rs"
+  config.vm.network "forwarded_port", guest: 6006, host: 6006, id: "storybook"
   config.vm.network "forwarded_port", guest: 3000, host: 3000, id: "browserSync"
   config.vm.network "forwarded_port", guest: 8025, host: 8025, id: "mailhog"
   config.vm.network "private_network", ip: "192.168.33.10"

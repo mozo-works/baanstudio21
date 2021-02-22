@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Template for a Node component.
+ */
+#}
+{%
+  set classes = [
+  'node',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  node.bundle|clean_class,
+  node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  'row'
+]
+%}
+<article{{attributes.addClass(classes)}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if view_mode == 'teaser' %}
+    <a href="{{ url }}" rel="bookmark">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+      {{ label }}
+    </a>
+  {% endif %}
+
+  {% if view_mode == 'full' %}
+    <div class="col-lg-4 project--description">
+      {{ content.field_year_month }}
+      {{ content.field_info }}
+      {{ content.body }}
+    </div>
+    <div class="col-lg-6 offset-md-1">
+      {{ content.field_works }}
+    </div>
+    <div class="col-lg-1 text-right">
+      <ul class="list-unstyled text-right">
+        <li><span class="active">책</span></li>
+        <li>소책자</li>
+        <li>브로슈어</li>
+        <li>인쇄물</li>
+        <li>포스터</li>
+        <li>광고</li>
+        <li>웹사이트</li>
+        <li>아이텐티티</li>
+      </ul>
+    </div>
+  {% endif %}
+</article>
