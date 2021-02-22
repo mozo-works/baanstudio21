@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Template for the page title.
+ */
+#}
+{{ title_prefix }}
+{% if title %}
+<header class="mb-5">
+  <div id="page-title"><span class="active">{{ title }}</span></div>
+</header>
+{% endif %}
+{{ title_suffix }}

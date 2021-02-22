@@ -25,7 +25,6 @@ function bs21_preprocess_node(&$vars) {
 function bs21_preprocess_paragraph(&$vars) {
   if ($vars['paragraph']->bundle() == 'works' && $vars['view_mode'] == 'preview') {
     $items = $vars['content']['field_media']['#items'] ?? NULL;
-    // ksm($items);
     $count = (!empty($items)) ? count($items) - 1 : 0;
     if ($count > 0) {
       foreach (range(1, $count) as $index) {
@@ -40,6 +39,6 @@ function bs21_preprocess_paragraph(&$vars) {
  */
 function bs21_preprocess_page(&$vars) {
   if ($vars['page']['#title'] == '') {
-    // unset($vars['page']['header']);
+    unset($vars['page']['header']);
   }
 }
