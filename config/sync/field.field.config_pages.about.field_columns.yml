@@ -1,0 +1,21 @@
+uuid: c246c404-2e40-4531-a423-74b61bbf4468
+langcode: ko
+status: true
+dependencies:
+  config:
+    - config_pages.type.about
+    - field.storage.config_pages.field_columns
+  module:
+    - text
+id: config_pages.about.field_columns
+field_name: field_columns
+entity_type: config_pages
+bundle: about
+label: 컬럼
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

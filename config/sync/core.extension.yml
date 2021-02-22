@@ -4,11 +4,13 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  bs21_site: 0
   ckeditor: 0
   color: 0
   comment: 0
   components: 0
   config: 0
+  config_pages: 0
   contact: 0
   contextual: 0
   datetime: 0

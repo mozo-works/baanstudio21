@@ -1,0 +1,7 @@
+bs21_site.about:
+  path: '/about'
+  defaults:
+    _title_callback: '\Drupal\bs21_site\Controller\Bs21SiteController::aboutTitle'
+    _controller: '\Drupal\bs21_site\Controller\Bs21SiteController::aboutContent'
+  requirements:
+    _permission: 'access content'

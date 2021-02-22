@@ -1,0 +1,17 @@
+uuid: ee4bed20-5d33-4ec5-94f2-9330063c09f7
+langcode: ko
+status: true
+dependencies: {  }
+id: about
+label: About
+context:
+  show_warning: true
+  group:
+    language: true
+  fallback:
+    language: ''
+menu:
+  path: /admin/config/system/about
+  weight: 1
+  description: '사이트 소개 페이지입니다.'
+token: false

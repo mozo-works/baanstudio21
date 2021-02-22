@@ -1,0 +1,22 @@
+uuid: 5210bfc4-a383-4d6e-ba9c-92003936c890
+langcode: ko
+status: true
+dependencies:
+  config:
+    - config_pages.type.about
+    - field.field.config_pages.about.field_columns
+  module:
+    - text
+id: config_pages.about.default
+targetEntityType: config_pages
+bundle: about
+mode: default
+content:
+  field_columns:
+    weight: 0
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

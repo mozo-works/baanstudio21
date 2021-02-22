@@ -1,0 +1,19 @@
+uuid: 356b8a69-484c-448c-ad60-9ac8143bccd4
+langcode: ko
+status: true
+dependencies:
+  module:
+    - config_pages
+    - text
+id: config_pages.field_columns
+field_name: field_columns
+entity_type: config_pages
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
