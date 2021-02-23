@@ -6,5 +6,6 @@ style:
   js:
     assets/js/bs21.script.js: {}
   dependencies:
-    - core/jquery
     - core/drupal
+    - core/jquery
+    - core/jquery.once

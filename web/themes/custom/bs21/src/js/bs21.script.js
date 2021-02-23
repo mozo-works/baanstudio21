@@ -2,11 +2,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 
 (function ($, Drupal) {
   'use strict';
-  Drupal.behaviors.helloWorld = {
+  Drupal.behaviors.scrollToTop = {
     attach: function (context) {
-      console.log('Hello World');
+      $('#btn-top', context).once('btn-top').on('click', () => {
+        $("html, body").animate({ scrollTop: "10px" });
+      })
     }
   };
-  console.log('loaded!')
+
 
 })(jQuery, Drupal);

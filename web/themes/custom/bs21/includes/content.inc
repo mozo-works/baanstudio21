@@ -32,6 +32,18 @@ function bs21_preprocess_paragraph(&$vars) {
       }
     }
   }
+  if ($vars['paragraph']->bundle() == 'works' && $vars['view_mode'] == 'default') {
+    $items = $vars['content']['field_work_type']['#items'] ?? NULL;
+    $count = (!empty($items)) ? count($items) : 0;
+    if ($count > 0) {
+      foreach (range(1, $count) as $index) {
+        $vars['content']['field_work_type']['#attributes'] = [
+          'class' => 'visually-hidden',
+          'id' => 'work-type-' . $index,
+        ];
+      }
+    }
+  }
 }
 
 /**

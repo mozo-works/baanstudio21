@@ -34,20 +34,22 @@
       {{ content.field_info }}
       {{ content.body }}
     </div>
-    <div class="col-lg-6 offset-md-1">
+    <div class="col-lg-6 offset-md-1" data-bs-spy="scroll" data-bs-target="#nav-work-types" data-bs-offset="0" tabindex="0">
       {{ content.field_works }}
     </div>
-    <div class="col-lg-1 text-right">
-      <ul class="list-unstyled text-right">
-        <li><span class="active">책</span></li>
-        <li>소책자</li>
-        <li>브로슈어</li>
-        <li>인쇄물</li>
-        <li>포스터</li>
-        <li>광고</li>
-        <li>웹사이트</li>
-        <li>아이텐티티</li>
-      </ul>
+    <div class="col-lg-1 text-end">
+      <nav id="nav-work-types">
+        <ul>
+          <li><a href="#work-type-1">책</a></li>
+          <li><a href="#work-type-2">소책자</a></li>
+          <li><a href="#work-type-3">브로슈어</a></li>
+          <li><a href="#work-type-4">인쇄물</a></li>
+          <li><a href="#work-type-5">포스터</a></li>
+          <li><a href="#work-type-6">광고</a></li>
+          <li><a href="#work-type-7">웹사이트</a></li>
+          <li><a href="#work-type-8">아이텐티티</a></li>
+        </ul>
+      </nav>
     </div>
   {% endif %}
 </article>
