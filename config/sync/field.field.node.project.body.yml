@@ -12,7 +12,7 @@ field_name: body
 entity_type: node
 bundle: project
 label: 소개글
-description: ''
+description: "기간\r\n장소\r\n의뢰\r\n내용\r\n기획\r\n감독*\r\n큐레이터*\r\n작가\r\n참여*\r\n설명"
 required: false
 translatable: true
 default_value: {  }
