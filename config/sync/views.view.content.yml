@@ -564,12 +564,14 @@ display:
     display_options:
       path: admin/content/node
       menu:
-        type: 'default tab'
+        type: tab
         title: 콘텐츠
         description: ''
-        menu_name: admin
+        expanded: false
+        parent: ''
         weight: -10
-        context: ''
+        context: '0'
+        menu_name: admin
       tab_options:
         type: normal
         title: 콘텐츠
@@ -602,7 +604,7 @@ display:
       display_description: ''
       path: admin/content/project
       menu:
-        type: tab
+        type: 'default tab'
         title: 프로젝트
         description: ''
         expanded: false
@@ -1010,6 +1012,11 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      tab_options:
+        type: tab
+        title: 프로젝트
+        description: ''
+        weight: 0
     cache_metadata:
       max-age: -1
       contexts:
