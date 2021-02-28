@@ -65,7 +65,7 @@ function bs21_preprocess_paragraph(&$vars) {
  */
 function bs21_preprocess_page(&$vars) {
   if ($vars['page']['#title'] == '' || is_project_page($vars)) {
-    // unset($vars['page']['header']);
+    unset($vars['page']['header']);
   }
 }
 
