@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.project.body
     - field.field.node.project.field_info
+    - field.field.node.project.field_weight
     - field.field.node.project.field_works
     - field.field.node.project.field_year_month
     - node.type.project
@@ -12,6 +13,7 @@ dependencies:
     - datetime
     - paragraphs
     - text
+    - weight
 id: node.project.default
 targetEntityType: node
 bundle: project
@@ -34,6 +36,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_weight:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: weight_selector
     region: content
   field_works:
     type: paragraphs

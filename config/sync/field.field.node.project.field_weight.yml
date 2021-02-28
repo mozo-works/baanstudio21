@@ -1,0 +1,24 @@
+uuid: b1d3c181-75be-4b60-ba69-6c4f3a8df7b1
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.project
+  module:
+    - weight
+id: node.project.field_weight
+field_name: field_weight
+entity_type: node
+bundle: project
+label: 순서
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '10000'
+field_type: weight

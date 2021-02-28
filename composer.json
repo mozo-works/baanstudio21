@@ -19,10 +19,10 @@
         "drupal/config_pages": "^2.9",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-recommended": "^9.1",
-        "drupal/draggableviews": "^2.0",
         "drupal/gin": "^3.0@alpha",
         "drupal/paragraphs": "^1.12",
         "drupal/radix": "^4.10",
+        "drupal/weight": "^3.2",
         "drush/drush": "^10.3"
     },
     "conflict": {

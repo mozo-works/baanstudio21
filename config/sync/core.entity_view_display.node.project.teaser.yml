@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.project.body
     - field.field.node.project.field_info
+    - field.field.node.project.field_weight
     - field.field.node.project.field_works
     - field.field.node.project.field_year_month
     - node.type.project
@@ -29,6 +30,7 @@ content:
 hidden:
   body: true
   field_info: true
+  field_weight: true
   field_year_month: true
   langcode: true
   links: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.project.body
     - field.field.node.project.field_info
+    - field.field.node.project.field_weight
     - field.field.node.project.field_works
     - field.field.node.project.field_year_month
     - node.type.project
@@ -31,6 +32,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_weight:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_works:
     type: entity_reference_revisions_entity_view
