@@ -4,17 +4,27 @@
  * Theme and preprocess functions for nodes.
  */
 
+use \Drupal\node\Entity\Node;
+
 /**
  * Implements hook_preprocess_node().
  */
 function bs21_preprocess_node(&$vars) {
-  if ($vars['node']->bundle() == 'project' && $vars['view_mode'] == 'teaser') {
-    $items = $vars['content']['field_works']['#items'] ?? NULL;
-    $count = (!empty($items)) ? count($items) - 1 : 0;
-    if ($count > 0) {
-      foreach (range(1, $count) as $index) {
-        unset($vars['content']['field_works'][$index]);
+  if ($vars['node']->bundle() == 'project') {
+    if ($vars['view_mode'] == 'teaser') {
+      $items = $vars['content']['field_works']['#items'] ?? NULL;
+      $count = (!empty($items)) ? count($items) - 1 : 0;
+      if ($count > 0) {
+        foreach (range(1, $count) as $index) {
+          unset($vars['content']['field_works'][$index]);
+        }
       }
+    }
+    if ($vars['view_mode'] == 'full') {
+      $prev_nid = $vars['content']['prevnext_previous']['#nid'] ?? '';
+      $next_nid = $vars['content']['prevnext_next']['#nid'] ?? '';
+      $vars['prev'] = Node::load($prev_nid);
+      $vars['next'] = Node::load($next_nid);
     }
   }
 }

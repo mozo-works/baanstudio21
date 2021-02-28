@@ -34,3 +34,5 @@ hidden:
   field_year_month: true
   langcode: true
   links: true
+  prevnext_next: true
+  prevnext_previous: true
