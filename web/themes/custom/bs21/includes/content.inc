@@ -60,7 +60,16 @@ function bs21_preprocess_paragraph(&$vars) {
  * Implements hook_preprocess_page().
  */
 function bs21_preprocess_page(&$vars) {
-  if ($vars['page']['#title'] == '') {
+  if ($vars['page']['#title'] == '' || is_project_page($vars)) {
     unset($vars['page']['header']);
   }
+}
+
+/**
+ * Check if current page is project.
+ */
+function is_project_page($vars) {
+  return (!empty($vars['node'])
+    && $vars['node']->bundle() == 'project'
+  );
 }

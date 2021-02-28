@@ -13,7 +13,7 @@ class Bs21SiteController extends ControllerBase {
    * Returns a page title.
    */
   public function aboutTitle() {
-    return  '소개';
+    return  '정보';
   }
 
   /**

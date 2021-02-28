@@ -30,6 +30,8 @@
 
   {% if view_mode == 'full' %}
     <div class="col-lg-4 project--description">
+      <h1 id="page--title"><span class="active">{{ label }}</span></h1>
+      {{ content.title }}
       {{ content.field_year_month }}
       {{ content.field_info }}
       {{ content.body }}
