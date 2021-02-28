@@ -25,6 +25,10 @@ function bs21_preprocess_node(&$vars) {
       $next_nid = $vars['content']['prevnext_next']['#nid'] ?? '';
       $vars['prev'] = Node::load($prev_nid);
       $vars['next'] = Node::load($next_nid);
+
+      $dates = explode('-', $vars['content']['field_year_month'][0]['#text']);
+      $dates[] = '';
+      $vars['content']['field_year_month'][0]['#text'] = implode('. ', $dates);
     }
   }
 }
@@ -61,7 +65,7 @@ function bs21_preprocess_paragraph(&$vars) {
  */
 function bs21_preprocess_page(&$vars) {
   if ($vars['page']['#title'] == '' || is_project_page($vars)) {
-    unset($vars['page']['header']);
+    // unset($vars['page']['header']);
   }
 }
 

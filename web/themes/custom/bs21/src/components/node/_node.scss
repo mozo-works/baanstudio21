@@ -8,4 +8,9 @@
   &.project--full .image__field-media-image {
     margin-bottom: 1.5rem;
   }
+  .project__field-year-month {
+    .field__label {
+      margin-right: .3rem;
+    }
+  }
 }
