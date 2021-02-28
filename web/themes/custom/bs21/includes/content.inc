@@ -4,6 +4,7 @@
  * Theme and preprocess functions for nodes.
  */
 
+use Drupal\Core\Url;
 use \Drupal\node\Entity\Node;
 
 /**
@@ -29,6 +30,24 @@ function bs21_preprocess_node(&$vars) {
       $dates = explode('-', $vars['content']['field_year_month'][0]['#text']);
       $dates[] = '';
       $vars['content']['field_year_month'][0]['#text'] = implode('. ', $dates);
+
+      $works = $vars['node']->field_works->referencedEntities();
+      $work_types = [
+        '#theme' => 'item_list',
+        '#list_type' => 'ul',
+        '#items' => [],
+      ];
+      $items = [];
+      foreach($works as $index => $work) {
+        $term = $work->field_work_type->entity;
+        $link = [
+          '#type' => 'link',
+          '#title' => $term->getName(),
+          '#url' => Url::fromUserInput('#work-type-' . ($index + 1))
+        ];
+        $work_types['#items'][]['#children'] = render($link);
+      }
+      $vars['work_types'] = $work_types;
     }
   }
 }
@@ -65,7 +84,7 @@ function bs21_preprocess_paragraph(&$vars) {
  */
 function bs21_preprocess_page(&$vars) {
   if ($vars['page']['#title'] == '' || is_project_page($vars)) {
-    unset($vars['page']['header']);
+    // unset($vars['page']['header']);
   }
 }
 
