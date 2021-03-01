@@ -9,6 +9,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
       })
     }
   };
+  Drupal.behaviors.setWidthWorkTypeNav = {
+    attach: function (context) {
+      if ($('.project--full').length > 0) {
+        let col = $('.project--full .col-lg-1');
+        $('#nav-work-types').width(col.width());
+      }
 
+    }
+  }
 
 })(jQuery, Drupal);

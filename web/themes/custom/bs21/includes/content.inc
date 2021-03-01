@@ -35,9 +35,8 @@ function bs21_preprocess_node(&$vars) {
       $work_types = [
         '#theme' => 'item_list',
         '#list_type' => 'ul',
-        '#items' => [],
+        '#attributes' => ['class' => ['text-end', 'd-block']],
       ];
-      $items = [];
       foreach($works as $index => $work) {
         $term = $work->field_work_type->entity;
         $link = [
