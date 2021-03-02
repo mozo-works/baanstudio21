@@ -5,12 +5,17 @@
     list-style: none;
     padding-left: 0;
   }
-  &.project--full .image__field-media-image {
-    margin-bottom: 1.5rem;
-  }
-  .project__field-year-month {
-    .field__label {
-      margin-right: .3rem;
+  &.project--full {
+    #page--title {
+      margin-bottom: 2.5rem;
+    }
+    .image__field-media-image {
+      margin-bottom: 1.5rem;
+    }
+    .project__field-year-month {
+      .field__label {
+        margin-right: .3rem;
+      }
     }
   }
 }
