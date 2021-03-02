@@ -39,12 +39,14 @@ function bs21_preprocess_node(&$vars) {
       ];
       foreach($works as $index => $work) {
         $term = $work->field_work_type->entity;
-        $link = [
-          '#type' => 'link',
-          '#title' => $term->getName(),
-          '#url' => Url::fromUserInput('#work-type-' . ($index + 1))
-        ];
-        $work_types['#items'][]['#children'] = render($link);
+        if (!empty($term)) {
+          $link = [
+            '#type' => 'link',
+            '#title' => $term->getName(),
+            '#url' => Url::fromUserInput('#work-type-' . ($index + 1))
+          ];
+          $work_types['#items'][]['#children'] = render($link);
+        }
       }
       $vars['work_types'] = $work_types;
     }
