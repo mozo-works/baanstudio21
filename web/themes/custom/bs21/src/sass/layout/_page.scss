@@ -6,7 +6,11 @@ body {
 }
 
 .container-fluid.page {
-  padding: 40px 40px 0 40px;
+  padding: 0 40px 0 40px;
+}
+
+.page--header.sticky-top {
+  padding-top: 40px;
 }
 
 .active {
