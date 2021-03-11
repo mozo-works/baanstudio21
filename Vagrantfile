@@ -8,9 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 6006, host: 6006, id: "storybook"
   config.vm.network "forwarded_port", guest: 3000, host: 3000, id: "browserSync"
   config.vm.network "forwarded_port", guest: 8025, host: 8025, id: "mailhog"
-  config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.synced_folder ".", "/vagrant", type: "nfs"
-  config.vbguest.auto_update = false
+  config.vm.network "forwarded_port", guest: 5678, host: 5678, id: "code-server"
   config.ssh.shell = "bash"
 
   config.vm.provider "virtualbox" do |vb|
