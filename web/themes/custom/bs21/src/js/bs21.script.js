@@ -15,8 +15,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
         let col = $('.project--full .col-lg-1');
         $('#nav-work-types').width(col.width());
       }
-
     }
   }
+
+  $(function(){
+    $('#try-search').on('click', e => {
+      console.log('try search!!');
+      $('#search-block').css('visibility', 'visible');
+    })
+  });
 
 })(jQuery, Drupal);
