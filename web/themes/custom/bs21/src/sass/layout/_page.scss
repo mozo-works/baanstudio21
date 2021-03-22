@@ -3,6 +3,13 @@
 
 body {
   position: relative;
+  &.#{&}--search {
+    .block--bs21-primary-local-tasks,
+    .block--bs21-content > #search-form,
+    .block--bs21-content > h2 {
+      display: none;
+    }
+  }
 }
 
 .container-fluid.page {

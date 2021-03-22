@@ -1,60 +1,65 @@
 // Page: Header
 // -----------------------------------------------------------------------------
 .page--header {
-    line-height: 1.42;
-    letter-spacing: 0.3px;
-    margin-bottom: 36px;
-    .navbar {
-        .container-fluid {
-            align-items: flex-start;
-        }
-        #site-name a.navbar-brand {
-            white-space: nowrap;
-            font-size: $font-size-base;
-            padding: 0;
-        }
-        .menu--item--list {
-            margin-left: 34px;
-        }
-    }
-    #fastSearch {
-        visibility: hidden;
-        display: inline-block;
-        max-width: 365px;
-    }
-    
-    #searchInput {
-        border: 0;
-        &:focus {
-            outline: none;
-        }
-    }
-    
-    #searchResults {
-        width: 100%;
-        height: 100%;
-        visibility: hidden;
-        display: block;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        padding-top: 140px;
-        padding-left: 40px;
-        padding-right: 40px;
-        background-color: #fff;
-    
-        .searchTerm {
-            margin-bottom: 36px;
-        }
-        .list-unstyled {
-            border-top: 1px dashed $gray-600;
-            li {
-                padding: 4px 0;
-                border-bottom: 1px dashed $gray-600;
-            }
-        }
-        
-    }
-    
-}
+  line-height: 1.42;
+  letter-spacing: 0.3px;
+  margin-bottom: 36px;
 
+  .navbar {
+    .container-fluid {
+      align-items: flex-start;
+    }
+
+    #site-name a.navbar-brand {
+      white-space: nowrap;
+      font-size: $font-size-base;
+      padding: 0;
+    }
+
+    .menu--item--list {
+      margin-left: 34px;
+    }
+  }
+
+  #search-block {
+    visibility: hidden;
+    display: inline-block;
+    max-width: 365px;
+  }
+
+  #search-input {
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  #searchResults {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #fff;
+
+    .searchTerm {
+      margin-bottom: 36px;
+    }
+
+    .list-unstyled {
+      border-top: 1px dashed $gray-600;
+
+      li {
+        padding: 4px 0;
+        border-bottom: 1px dashed $gray-600;
+      }
+    }
+  }
+
+}
