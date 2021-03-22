@@ -1,29 +1,76 @@
 {
-	"folders": [
-		{
-			"name": "themes-radix",
-			"path": "web/themes/contrib/radix"
-		},
-		{
-			"name": "themes-custom-bs21",
-			"path": "web/themes/custom/bs21"
-		},
-		{
-			"name": "bs21-includes",
-			"path": "web/themes/custom/bs21/includes"
-		},
-		{
-			"name": "bs21-templates",
-			"path": "web/themes/custom/bs21/templates"
-		},
-		{
-			"name": "bs21-src",
-			"path": "web/themes/custom/bs21/src"
-		},
-		{
-			"name": "project-root",
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "name": "themes-radix",
+      "path": "web/themes/contrib/radix"
+    },
+    {
+      "name": "themes-custom-bs21",
+      "path": "web/themes/custom/bs21"
+    },
+    {
+      "name": "bs21-includes",
+      "path": "web/themes/custom/bs21/includes"
+    },
+    {
+      "name": "bs21-templates",
+      "path": "web/themes/custom/bs21/templates"
+    },
+    {
+      "name": "bs21-src",
+      "path": "web/themes/custom/bs21/src"
+    },
+    {
+      "name": "project-root",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "breadcrumbs.enabled": true,
+    "css.validate": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "editor.insertSpaces": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "off",
+    "editor.detectIndentation": true,
+    "editor.rulers": [
+      80
+    ],
+    "files.associations": {
+      "*.inc": "php",
+      "*.module": "php",
+      "*.install": "php",
+      "*.theme": "php",
+      "*.tpl.php": "php",
+      "*.test": "php",
+      "*.php": "php",
+      "*.info": "ini",
+      "*.twig": "twig",
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "html.format.enable": true,
+    "html.format.wrapLineLength": 80,
+    "telemetry.enableTelemetry": false,
+    /* Empty Indent */
+    "emptyIndent.removeIndent": true,
+    "emptyIndent.highlightIndent": false,
+    "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
+    "emmet.includeLanguages": {
+      "twig": "html"
+    },
+    "php.suggest.basic": false,
+    "intelephense.environment.documentRoot": "web/core/index.php",
+    "php-docblocker.gap": true,
+    "php-docblocker.useShortNames": true,
+    "phpcs.enable": true,
+    "phpcs.executablePath": "/home/vagrant/.config/composer/vendor/bin/phpcs",
+    "phpcs.standard": "Drupal,DrupalPractice",
+    "remote.autoForwardPorts": false
+  }
 }

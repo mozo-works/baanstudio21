@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     node.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
     node.vm.provision "file", source: "~/.ssh/id_rsa", destination: ".ssh/"
     node.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: ".ssh/"
-    node.vm.provision "file", source: "~/.ssh/kyeol-dev.pem", destination: ".ssh/"
+    node.vm.provision "file", source: "~/.ssh/kyeol.pem", destination: ".ssh/"
     # cp ~/Drive/provision/ubuntu/env.example ./.env
     node.vm.provision "file", source: "./.env", destination: ".env"
 
