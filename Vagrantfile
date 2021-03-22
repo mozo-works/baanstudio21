@@ -2,30 +2,29 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/focal64"
-  config.vm.network "forwarded_port", guest: 80, host: 8080, id: "apache2"
-  config.vm.network "forwarded_port", guest: 8888, host: 8888, id: "drush-rs"
-  config.vm.network "forwarded_port", guest: 6006, host: 6006, id: "storybook"
-  config.vm.network "forwarded_port", guest: 3000, host: 3000, id: "browserSync"
-  config.vm.network "forwarded_port", guest: 8025, host: 8025, id: "mailhog"
-  config.vm.network "forwarded_port", guest: 5678, host: 5678, id: "code-server"
-  config.ssh.shell = "bash"
 
-  config.vm.provider "virtualbox" do |vb|
-    vb.name = "baanstudio21"
-    vb.cpus = 2
-    vb.memory = 1024
-    vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
+  config.vm.define "baanstudio21" do |node|
+    node.vm.box = "ubuntu/focal64"
+    node.vm.hostname = "baanstudio21"
+    node.vm.network "private_network", ip: "192.168.50.15"
+    node.vm.provider "virtualbox" do |vb|
+      vb.name = "baanstudio21"
+      vb.cpus = 1
+      vb.memory = 1024
+    end
+
+    node.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
+    node.vm.provision "file", source: "~/.ssh/id_rsa", destination: ".ssh/"
+    node.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: ".ssh/"
+    node.vm.provision "file", source: "~/.ssh/kyeol-dev.pem", destination: ".ssh/"
+    # cp ~/Drive/provision/ubuntu/env.example ./.env
+    node.vm.provision "file", source: "./.env", destination: ".env"
+
+    node.vm.provision "shell", path: "~/Drive/provision/ubuntu/bootstrap.sh"
+    node.vm.provision "shell", path: "~/Drive/provision/ubuntu/vagrant.sh", privileged: false
+    node.vm.provision "shell", path: "~/Drive/provision/ubuntu/mariadb.sh", privileged: false
+    node.vm.provision "shell", path: "~/Drive/provision/ubuntu/php.sh", privileged: false
+    node.vm.provision "shell", path: "~/Drive/provision/ubuntu/nodejs.sh", privileged: false
   end
 
-  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
-  config.vm.provision "file", source: "~/.ssh/id_rsa", destination: ".ssh/"
-  config.vm.provision "file", source: "~/.ssh/kyeol.pem", destination: ".ssh/"
-  config.vm.provision "shell", path: "provision/bootstrap.sh"
-  config.vm.provision "shell", path: "provision/add-swap.sh"
-  config.vm.provision "shell", path: "provision/mariadb-10.5.sh"
-  config.vm.provision "shell", path: "provision/apache2-php7.4.sh"
-  config.vm.provision "shell", path: "provision/nvm.sh", privileged: false
-  config.vm.provision "shell", path: "provision/configure.sh", privileged: false
-  config.vm.provision "shell", path: "provision/check.sh"
 end

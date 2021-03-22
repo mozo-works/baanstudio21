@@ -7,44 +7,23 @@ local:
     - files: sites/default/files
   env-vars:
     DRUPAL_ENV: dev
-  command:
-    sql:
-      sync:
-        options:
-          structure-tables-key: common
-          skip-tables-key: common
-          target-dump: /vagrant/dump/prod.sql.gz
 
 stage:
-  uri: http://kyeol.durumi.io
-  root: /var/www/baanstudio21/web
-  host: 13.124.40.13
-  user: ubuntu
-  os: Linux
+  host: ${env.STAGE_HOST}
+  user: ${env.STAGE_USER}
+  root: ${env.STAGE_ROOT}
+  uri: ${env.STAGE_URI}
+  ssh:
+    options: '-i ${env.STAGE_PEM_KEY}'
   paths:
    - files: sites/default/files
-  ssh:
-    options: '-o PasswordAuthentication=no -i ~/.ssh/kyeol.pem'
-  env-vars:
-    DRUPAL_ENV: stage
-  command:
-    sql:
-      sync:
-        options:
-          structure-tables-key: common
-          skip-tables-key: common
 
 prod:
-  uri:
-  root:
-  host:
-  user: ubuntu
-  os: Linux
+  host: ${env.PROD_HOST}
+  user: ${env.PROD_USER}
+  root: ${env.PROD_ROOT}
+  uri: ${env.PROD_URI}
+  ssh:
+    options: '-i ${env.PROD_PEM_KEY}'
   paths:
-   - files: sites/default/files
-  command:
-    sql:
-      dump:
-        options:
-          structure-tables-key: common
-          skip-tables-key: common
+    - files: sites/default/files
