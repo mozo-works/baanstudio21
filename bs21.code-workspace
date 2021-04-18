@@ -71,6 +71,18 @@
     "phpcs.enable": true,
     "phpcs.executablePath": "/home/vagrant/.config/composer/vendor/bin/phpcs",
     "phpcs.standard": "Drupal,DrupalPractice",
-    "remote.autoForwardPorts": false
+    "remote.autoForwardPorts": false,
+    "remote.SSH.defaultForwardedPorts": [
+      {
+        "localPort": 8080,
+        "remotePort": 80,
+        "name": "apache2"
+      },
+      {
+        "localPort": 3000,
+        "remotePort": 3000,
+        "name": "webpack-dev"
+      }
+    ]
   }
 }
