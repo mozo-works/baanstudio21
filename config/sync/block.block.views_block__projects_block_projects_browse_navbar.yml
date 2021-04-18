@@ -1,0 +1,29 @@
+uuid: 3cfa3df6-5262-4f2d-ba23-234b2c5e32b2
+langcode: ko
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - system
+    - views
+  theme:
+    - bs21
+id: views_block__projects_block_projects_browse_navbar
+theme: bs21
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:projects-block_projects_browse_navbar'
+settings:
+  id: 'views_block:projects-block_projects_browse_navbar'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/projects/browse*'
+    negate: false

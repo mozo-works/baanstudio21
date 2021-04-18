@@ -4,8 +4,9 @@
  * Template for the main page.
  */
 #}
-<div class="container-fluid page">
-  <header class="page--header sticky-top bg-white">
+{% set classes = ['container-fluid page'] %}
+<div{{ attributes.addClass(classes) }}>
+  <header{{ header_attributes }}>
   {% embed '@bs21/navbar/navbar.twig' with {
     placement: 'sticky-top'
   } %}
@@ -29,9 +30,9 @@
   {% endembed %}
   </header>
 
-  <main class="pb-5 block--content">
+  <main{{ main_attributes }}>
     {% if page.header %}
-      <header class="page--header">
+      <header{{ main_header_attributes }}>
         <div class="container-fluid p-0">
           {{ page.header }}
         </div>
@@ -40,7 +41,7 @@
 
     {% if page.content %}
       <div class="page--content">
-        <div class="container-fluid p-0">
+        <div{{ main_content_attributes }}>
           {{ page.content }}
         </div>
       </div>
