@@ -40,6 +40,7 @@ function bs21_preprocess_views_view(&$vars) {
       '#context' => [
         'title' => $title_sort,
         'field_year_month' => $year_sort,
+        'current_uri' => \Drupal::request()->getRequestUri(),
       ],
     ];
   }

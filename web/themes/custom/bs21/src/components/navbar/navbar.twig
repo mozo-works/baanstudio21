@@ -6,7 +6,7 @@
 #}
 <nav class="navbar navbar-expand-lg navbar-light p-0">
   <div class="container-fluid p-0">
-    <span id="site-name" class="col-lg-3 py-0 mb-3">
+    <span id="site-name" class="col-lg-6 py-0 mb-3">
     {% block branding %}
       {{ branding }}
     {% endblock %}
@@ -16,15 +16,14 @@
     </button>
     <div class="collapse navbar-collapse p-0 mb-3" id="navbarSupportedContent">
       <ul class="navbar-nav row g-0 w-100">
-        <li class="nav-item col-lg-6"><a class="ms-2" href="/projects/browse">목록</a></li>
+        <li class="nav-item col-lg-6"><a class="ms-2" href="/projects/browse">Archive</a></li>
         <li id="search-block" class="nav-item col-lg-3 text-end{% if keys %} visible{% endif %}">
           <form action="/search/node">
             <input id="search-input" name="keys" class="border-bottom text-start w-75 d-inline-block"{% if keys %} value="{{ keys }}"{% endif %}>
           </form>
         </li>
-        <li class="nav-item col"><a class="text-end" id="try-search" href="#">검색</a></li>
-        <li class="nav-item col text-center"><a class="text-end" href="/about">정보</a></li>
-        <li class="nav-item col text-end"><a class="text-end" href="/en">EN</a></li>
+        <li class="nav-item col"><a class="text-end" id="try-search" href="#">Search</a></li>
+        <li class="nav-item col text-end"><a class="text-end" href="/about">About</a></li>
       </ul>
     </div>
   </div>
