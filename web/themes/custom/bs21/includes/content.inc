@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @file
  * Theme and preprocess functions for nodes.
  */
 
 use Drupal\Core\Url;
-use \Drupal\node\Entity\Node;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_preprocess_node().
@@ -37,13 +38,13 @@ function bs21_preprocess_node(&$vars) {
         '#list_type' => 'ul',
         '#attributes' => ['class' => ['text-end', 'd-block']],
       ];
-      foreach($works as $index => $work) {
+      foreach ($works as $index => $work) {
         $term = $work->field_work_type->entity;
         if (!empty($term)) {
           $link = [
             '#type' => 'link',
             '#title' => $term->getName(),
-            '#url' => Url::fromUserInput('#work-type-' . ($index + 1))
+            '#url' => Url::fromUserInput('#work-type-' . ($index + 1)),
           ];
           $work_types['#items'][]['#children'] = render($link);
         }
