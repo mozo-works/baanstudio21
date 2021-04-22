@@ -44,9 +44,12 @@ function bs21_preprocess_node(&$vars) {
           $link = [
             '#type' => 'link',
             '#title' => $term->getName(),
-            '#url' => Url::fromUserInput('#work-type-' . ($index + 1)),
+            '#url' => Url::fromUserInput('#work-type-' . $term->id()),
           ];
           $work_types['#items'][]['#children'] = render($link);
+          if ($index === 0) {
+            $link['#attributes']['class'][] = 'active';
+          }
         }
       }
       $vars['work_types'] = $work_types;
@@ -67,14 +70,17 @@ function bs21_preprocess_paragraph(&$vars) {
       }
     }
   }
+  // 프로젝트 상세 화면.
   if ($vars['paragraph']->bundle() == 'works' && $vars['view_mode'] == 'default') {
     $items = $vars['content']['field_work_type']['#items'] ?? NULL;
     $count = (!empty($items)) ? count($items) : 0;
     if ($count > 0) {
+      $work_type = reset($vars['content']['field_work_type']['#object']->field_work_type->getValue());
+      $tid = $work_type['target_id'];
       foreach (range(1, $count) as $index) {
         $vars['content']['field_work_type']['#attributes'] = [
           'class' => 'visually-hidden',
-          'id' => 'work-type-' . $index,
+          'id' => 'work-type-' . $tid,
         ];
       }
     }

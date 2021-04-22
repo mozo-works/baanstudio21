@@ -20,9 +20,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 
   $(function(){
     $('#try-search').on('click', e => {
-      console.log('try search!!');
       $('#search-block').css('visibility', 'visible');
     })
+    $('#nav-work-types a').on('click', e => {
+      $('#nav-work-types a').removeClass('active');
+      $(e.currentTarget).addClass('active');
+    });
   });
 
 })(jQuery, Drupal);

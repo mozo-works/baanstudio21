@@ -6781,8 +6781,11 @@ __webpack_require__.r(__webpack_exports__);
   };
   $(function () {
     $('#try-search').on('click', function (e) {
-      console.log('try search!!');
       $('#search-block').css('visibility', 'visible');
+    });
+    $('#nav-work-types a').on('click', function (e) {
+      $('#nav-work-types a').removeClass('active');
+      $(e.currentTarget).addClass('active');
     });
   });
 })(jQuery, Drupal);
