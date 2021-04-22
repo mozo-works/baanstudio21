@@ -22,9 +22,10 @@
   {% if view_mode == 'teaser' %}
     <a href="{{ url }}" rel="bookmark">
       {% block content %}
-        {{ content }}
+        {{ content|without('field_info_list') }}
       {% endblock %}
       {{ label }}
+      {{ content['field_info_list'] }}
     </a>
   {% endif %}
 

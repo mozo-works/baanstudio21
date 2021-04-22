@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.project.body
     - field.field.node.project.field_info
+    - field.field.node.project.field_info_list
     - field.field.node.project.field_weight
     - field.field.node.project.field_works
     - field.field.node.project.field_year_month
@@ -60,6 +61,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_info_list: true
   field_year_month: true
   langcode: true
   links: true

@@ -1,0 +1,21 @@
+uuid: 10dcf6f8-1f9f-406d-9564-19862a7716da
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info_list
+    - node.type.project
+  module:
+    - text
+id: node.project.field_info_list
+field_name: field_info_list
+entity_type: node
+bundle: project
+label: 정보(목록)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

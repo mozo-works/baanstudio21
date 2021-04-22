@@ -2,7 +2,7 @@
 
 local:
   uri: http://localhost:8080
-  root: /vagrant/web
+  root: /var/www/baanstudio21/web
   paths:
     - files: sites/default/files
   env-vars:
