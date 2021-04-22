@@ -15,10 +15,7 @@ label: 정보
 description: "기간\r\n장소\r\n의뢰\r\n내용\r\n기획\r\n감독\r\n큐레이터\r\n작가\r\n참여작가"
 required: true
 translatable: false
-default_value:
-  -
-    value: "<ul>\r\n\t<li>기간</li>\r\n\t<li>장소</li>\r\n\t<li>의뢰</li>\r\n\t<li>내용</li>\r\n\t<li>기획</li>\r\n\t<li>감독</li>\r\n\t<li>큐레이터</li>\r\n\t<li>작가</li>\r\n\t<li>참여작가</li>\r\n</ul>\r\n"
-    format: basic_html
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: text_long
