@@ -13,7 +13,7 @@ class Bs21SiteController extends ControllerBase {
    * Returns a page title.
    */
   public function aboutTitle() {
-    return  '정보';
+    return 'About';
   }
 
   /**
@@ -22,13 +22,13 @@ class Bs21SiteController extends ControllerBase {
   public function aboutContent() {
     $build = [
       '#type' => 'container',
-      '#attributes' => ['class' => 'row']
+      '#attributes' => ['class' => 'row'],
     ];
     $columns = bs21_site_config('about')->field_columns->getValue();
     foreach ($columns as $order => $column) {
       $build[$order] = [
         '#type' => 'container',
-        '#attributes' => ['class' => 'col-md-3'],
+        '#attributes' => ['class' => 'col-md-6'],
         'content' => ['#markup' => $column['value']],
       ];
     }

@@ -5,6 +5,10 @@
       "path": "web/themes/contrib/radix"
     },
     {
+      "name": "modules-custom",
+      "path": "web/modules/custom"
+    },
+    {
       "name": "themes-custom-bs21",
       "path": "web/themes/custom/bs21"
     },
