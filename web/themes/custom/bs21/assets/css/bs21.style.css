@@ -10741,7 +10741,7 @@ body.body--search .block--bs21-content > .h2 {
   margin-bottom: 18px;
 }
 .card--project span {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .same-height {
@@ -10844,7 +10844,8 @@ body.body--search .block--bs21-content > .h2 {
   list-style: none;
   padding-left: 0;
 }
-.node.project--full #page--title {
+.node.project--full #page--title,
+.node.project--full .project__field-info {
   margin-bottom: 2.5rem;
 }
 .node.project--full .image__field-media-image {

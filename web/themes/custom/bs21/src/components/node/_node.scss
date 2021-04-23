@@ -6,7 +6,8 @@
     padding-left: 0;
   }
   &.project--full {
-    #page--title {
+    #page--title,
+    .project__field-info {
       margin-bottom: 2.5rem;
     }
     .image__field-media-image {
