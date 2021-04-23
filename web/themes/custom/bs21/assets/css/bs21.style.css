@@ -10795,7 +10795,6 @@ body.body--search .block--bs21-content > .h2 {
   margin-left: 34px;
 }
 .page--header #search-block {
-  visibility: hidden;
   display: inline-block;
   max-width: 365px;
 }

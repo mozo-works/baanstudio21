@@ -6781,7 +6781,7 @@ __webpack_require__.r(__webpack_exports__);
   };
   $(function () {
     $('#try-search').on('click', function (e) {
-      $('#search-block').css('visibility', 'visible');
+      $('#search-block').removeClass('d-none').addClass('position-absolute');
     });
     $('#nav-work-types a').on('click', function (e) {
       $('#nav-work-types a').removeClass('active');

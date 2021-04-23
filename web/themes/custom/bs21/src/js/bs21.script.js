@@ -20,7 +20,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 
   $(function(){
     $('#try-search').on('click', e => {
-      $('#search-block').css('visibility', 'visible');
+      $('#search-block').removeClass('d-none').addClass('position-absolute');
     })
     $('#nav-work-types a').on('click', e => {
       $('#nav-work-types a').removeClass('active');
