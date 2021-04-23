@@ -371,7 +371,7 @@ display:
       style:
         type: default
         options:
-          row_class: 'col-md-6 card--project'
+          row_class: 'col-md-4 card--project'
           default_row_class: false
           uses_fields: false
       row:

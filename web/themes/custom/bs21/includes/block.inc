@@ -10,6 +10,6 @@
  */
 function bs21_preprocess_block(&$vars) {
   if ($vars['plugin_id'] == 'views_block:projects-block_projects_browse_navbar') {
-    $vars['attributes']['class'][] = 'col-lg-4';
+    $vars['attributes']['class'][] = 'col-md-3';
   }
 }
