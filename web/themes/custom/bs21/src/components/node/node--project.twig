@@ -54,12 +54,12 @@
 <div class="project--navbar row" style="margin-top: 190px; margin-bottom: 120px;">
   <div class="col">
     {% if prev %}
-    <a href="{{ path('entity.node.canonical', {'node': prev.id }) }}" title="{{ prev.label }}">&lt; 전작업</a>
+    <a href="{{ path('entity.node.canonical', {'node': prev.id }) }}" title="{{ prev.label }}">&lt; Prev</a>
     {% endif %}
   </div>
   <div class="col text-end">
     {% if next %}
-    <a href="{{ path('entity.node.canonical', {'node': next.id}) }}" title="{{ next.label }}">후작업 &gt;</a>
+    <a href="{{ path('entity.node.canonical', {'node': next.id}) }}" title="{{ next.label }}">Next &gt;</a>
     {% endif %}
   </div>
 </div>
