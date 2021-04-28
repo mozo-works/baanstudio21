@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------------------
 .project--teaser {
     span {
-        display: inline;
+        display: inline-block;
     }
 }
 
@@ -13,7 +13,6 @@
         margin-bottom: 36px;
         &--titles {
             height: 14px;
-            line-height: 28px;
         }
     }
 }

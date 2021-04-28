@@ -5,31 +5,32 @@
  */
 #}
 {% set classes = ['container-fluid page'] %}
+
+<header{{ header_attributes }}>
+{% embed '@bs21/navbar/navbar.twig' with {
+  placement: 'sticky-top'
+} %}
+  {% block branding %}
+    {% if page.navbar_branding %}
+      {{ page.navbar_branding }}
+    {% endif %}
+  {% endblock %}
+
+  {% block left %}
+    {% if page.navbar_left %}
+      {{ page.navbar_left }}
+    {% endif %}
+  {% endblock %}
+
+  {% block right %}
+    {% if page.navbar_right %}
+      {{ page.navbar_right }}
+    {% endif %}
+  {% endblock %}
+{% endembed %}
+</header>
+
 <div{{ attributes.addClass(classes) }}>
-  <header{{ header_attributes }}>
-  {% embed '@bs21/navbar/navbar.twig' with {
-    placement: 'sticky-top'
-  } %}
-    {% block branding %}
-      {% if page.navbar_branding %}
-        {{ page.navbar_branding }}
-      {% endif %}
-    {% endblock %}
-
-    {% block left %}
-      {% if page.navbar_left %}
-        {{ page.navbar_left }}
-      {% endif %}
-    {% endblock %}
-
-    {% block right %}
-      {% if page.navbar_right %}
-        {{ page.navbar_right }}
-      {% endif %}
-    {% endblock %}
-  {% endembed %}
-  </header>
-
   <main{{ main_attributes }}>
     {% if page.header %}
       <header{{ main_header_attributes }}>

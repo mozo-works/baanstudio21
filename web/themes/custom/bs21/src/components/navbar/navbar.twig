@@ -4,9 +4,9 @@
  * Template for Navbar component.
  */
 #}
-<nav class="navbar navbar-expand-lg navbar-light p-0">
-  <div class="container-fluid p-0">
-    <span id="site-name" class="col-lg-6 py-0 mb-3">
+<nav class="navbar navbar-expand-lg navbar-light pb-3">
+  <div class="container-fluid row">
+    <span id="site-name" class="col-lg-6">
     {% block branding %}
       {{ branding }}
     {% endblock %}
@@ -14,8 +14,8 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse p-0 mb-3" id="navbarSupportedContent">
-      <ul class="navbar-nav row g-0 w-100">
+    <div class="collapse navbar-collapse col-lg-6 ms-3" id="navbarSupportedContent">
+      <ul class="navbar-nav row w-100">
         <li class="nav-item col-lg-4"><a class="ms-2" href="/projects/browse">Archive</a></li>
         <li id="search-block" class="nav-item col-lg-2{% if keys %} position-absolute{% else%} d-none{% endif %}">
           <form action="/search/node">
