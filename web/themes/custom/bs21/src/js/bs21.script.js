@@ -30,11 +30,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
     if($('.project--full').length > 0) {
       let screenHeight = window.screen.height;
       let descHeight = screenHeight - $('.project--description').offset().top - 119;
-      console.log('DEBUG!!!!!!!!!!');
-      console.log(screenHeight, $('.project--description').offset(), descHeight);
       $('.project--description').css({
         height: descHeight + 'px',
-        overflowY: 'scroll'
+        overflowY: 'scroll',
+        paddingBottom: '396px'
       });
     }
   });
