@@ -10716,6 +10716,7 @@ textarea.form-control-lg {
 }
 body {
   position: relative;
+  background-color: #fcfcfc;
 }
 body.body--search .block--bs21-primary-local-tasks,
 body.body--search .block--bs21-content > #search-form,

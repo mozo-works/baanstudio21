@@ -18,7 +18,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
     }
   }
 
-  $(function(){
+  $(function () {
     $('#try-search').on('click', e => {
       $('#search-block').removeClass('d-none').addClass('position-absolute');
     })
@@ -26,6 +26,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
       $('#nav-work-types a').removeClass('active');
       $(e.currentTarget).addClass('active');
     });
+
   });
 
 })(jQuery, Drupal);

@@ -3,6 +3,7 @@
 
 body {
   position: relative;
+  background-color: #fcfcfc;
   &.#{&}--search {
     .block--bs21-primary-local-tasks,
     .block--bs21-content > #search-form,

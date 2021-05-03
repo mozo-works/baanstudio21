@@ -15,7 +15,7 @@ function bs21_preprocess_page(&$vars) {
     unset($vars['page']['header']);
   }
   $vars['keys'] = \Drupal::request()->query->get('keys') ?? '';
-  $vars['header_attributes'] = new Attribute(['class' => 'page--header sticky-top bg-white']);
+  $vars['header_attributes'] = new Attribute(['class' => 'page--header sticky-top']);
   $vars['main_attributes'] = new Attribute(['class' => 'pb-5 block--content']);
   $vars['main_header_attributes'] = new Attribute(['class' => 'page--header']);
   $vars['main_content_attributes'] = new Attribute(['class' => 'container-fluid p-0']);
