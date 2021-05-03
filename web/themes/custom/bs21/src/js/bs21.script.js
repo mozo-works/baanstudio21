@@ -26,6 +26,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
       $('#nav-work-types a').removeClass('active');
       $(e.currentTarget).addClass('active');
     });
+    let footerBottom = window.screen.height - $('#site-footer').offset().top;
+    if (footerBottom > 70) {
+      $('#site-footer').css('marginTop', footerBottom - 250);
+      $('#btn-top').addClass('d-none');
+    }
   });
 
 })(jQuery, Drupal);
