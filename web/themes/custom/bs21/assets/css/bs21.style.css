@@ -10856,7 +10856,7 @@ body.body--search .block--bs21-content > .h2 {
 .card--project {
   margin-bottom: 34px;
 }
-@media (min-width: 1921px) {
+@media (min-width: 1441px) {
   .card--project {
     height: 485px;
     /* if xxl */

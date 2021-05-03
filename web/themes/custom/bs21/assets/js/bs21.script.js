@@ -6786,7 +6786,18 @@ __webpack_require__.r(__webpack_exports__);
     $('#nav-work-types a').on('click', function (e) {
       $('#nav-work-types a').removeClass('active');
       $(e.currentTarget).addClass('active');
-    });
+    }); // 프로젝트 상세 화면
+
+    if ($('.project--full').length > 0) {
+      var screenHeight = window.screen.height;
+      var descHeight = screenHeight - $('.project--description').offset().top - 119;
+      console.log('DEBUG!!!!!!!!!!');
+      console.log(screenHeight, $('.project--description').offset(), descHeight);
+      $('.project--description').css({
+        height: descHeight + 'px',
+        overflowY: 'scroll'
+      });
+    }
   });
 })(jQuery, Drupal);
 
