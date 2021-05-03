@@ -1,9 +1,13 @@
 // project: Teaser
 // -----------------------------------------------------------------------------
-.project--teaser {
-  line-height: 1.7;
-  span {
-    display: inline-block;
+.card--project {
+  margin-bottom: 28px;
+  .project--teaser {
+    line-height: 1.7;
+    span {
+      display: inline-block;
+      margin-top: 8px;
+    }
   }
 }
 

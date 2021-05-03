@@ -19,6 +19,12 @@ body {
 
 .page--header.sticky-top {
   padding-top: 40px;
+  background-color: #fcfcfc;
+  #global-nav {
+    .container-fluid.row {
+      padding-left: 40px;
+    }
+  }
 }
 
 .active {
@@ -26,12 +32,6 @@ body {
   padding-bottom: 3px;
 }
 
-.card--project {
-  margin-bottom: 18px;
-  span {
-    margin-top: 10px;
-  }
-}
 .same-height {
   display: table; /* Make the container element behave like a table */
   width: 100%; /* Set full-width to expand the whole page */

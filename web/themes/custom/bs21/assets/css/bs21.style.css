@@ -634,7 +634,7 @@ progress {
   }
 }
 .row {
-  --bs-gutter-x: 2.5rem;
+  --bs-gutter-x: 1.25rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -10731,18 +10731,15 @@ body.body--search .block--bs21-content > .h2 {
 
 .page--header.sticky-top {
   padding-top: 40px;
+  background-color: #fcfcfc;
+}
+.page--header.sticky-top #global-nav .container-fluid.row, .page--header.sticky-top #global-nav .row.container-sm, .page--header.sticky-top #global-nav .row.container-md, .page--header.sticky-top #global-nav .row.container-lg, .page--header.sticky-top #global-nav .row.container-xl, .page--header.sticky-top #global-nav .row.container-xxl {
+  padding-left: 40px;
 }
 
 .active {
   border-bottom: 1px solid #6c757d;
   padding-bottom: 3px;
-}
-
-.card--project {
-  margin-bottom: 18px;
-}
-.card--project span {
-  margin-top: 10px;
 }
 
 .same-height {
@@ -10856,11 +10853,15 @@ body.body--search .block--bs21-content > .h2 {
   margin-right: 0.3rem;
 }
 
-.project--teaser {
+.card--project {
+  margin-bottom: 28px;
+}
+.card--project .project--teaser {
   line-height: 1.7;
 }
-.project--teaser span {
+.card--project .project--teaser span {
   display: inline-block;
+  margin-top: 8px;
 }
 
 .project--full--navbar {
