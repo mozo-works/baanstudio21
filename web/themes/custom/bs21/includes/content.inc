@@ -46,6 +46,10 @@ function bs21_preprocess_node(&$vars) {
             '#title' => $term->getName(),
             '#url' => Url::fromUserInput('#work-type-' . $term->id()),
           ];
+          if ($index === 0) {
+            $options = ['attributes' => ['class' => 'active']];
+            $link['#options'] = $options;
+          }
           $work_types['#items'][]['#children'] = render($link);
           if ($index === 0) {
             $link['#attributes']['class'][] = 'active';
