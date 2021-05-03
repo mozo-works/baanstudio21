@@ -634,7 +634,7 @@ progress {
   }
 }
 .row {
-  --bs-gutter-x: 1.25rem;
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -10854,7 +10854,13 @@ body.body--search .block--bs21-content > .h2 {
 }
 
 .card--project {
-  margin-bottom: 28px;
+  margin-bottom: 34px;
+}
+@media (min-width: 1921px) {
+  .card--project {
+    height: 485px;
+    /* if xxl */
+  }
 }
 .card--project .project--teaser {
   line-height: 1.7;

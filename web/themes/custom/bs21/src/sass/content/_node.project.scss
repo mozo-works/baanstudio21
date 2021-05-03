@@ -1,7 +1,10 @@
 // project: Teaser
 // -----------------------------------------------------------------------------
 .card--project {
-  margin-bottom: 28px;
+  margin-bottom: 34px;
+  @media (min-width: 1921px) {
+    height: 485px; /* if xxl */
+  }
   .project--teaser {
     line-height: 1.7;
     span {
