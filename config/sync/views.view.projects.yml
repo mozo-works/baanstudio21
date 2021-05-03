@@ -256,7 +256,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'border-bottom ms-3 px-0'
           default_row_class: false
       row:
         type: fields
@@ -471,7 +471,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"project-title-block\">\r\n  <span class=\"project--year float-end ms-3\">{{ field_year_month }}</span>\r\n  <span class=\"project--title\">{{ title }}</span>\r\n</div>\r\n{{ field_info_list }}"
+            text: "<div class=\"project-title-block\">\r\n  <span class=\"project--year float-end ms-3\">{{ field_year_month }}</span>\r\n  <span class=\"project--title\">{{ title }}</span>\r\n</div>\r\n<div class=\"d-none\">{{ field_info_list }}</div>"
             make_link: true
             path: '/node/{{ nid }}'
             absolute: false
@@ -605,6 +605,7 @@ display:
         sorts: false
         style: false
         row: false
+        css_class: false
       title: browse
       sorts:
         field_year_month_value:
@@ -637,7 +638,7 @@ display:
       style:
         type: default
         options:
-          row_class: 'col-md-4 card--project'
+          row_class: 'col-md-6 card--project'
           default_row_class: false
           uses_fields: false
       row:
@@ -645,6 +646,7 @@ display:
         options:
           relationship: none
           view_mode: teaser
+      css_class: 'row pe-3'
     cache_metadata:
       max-age: -1
       contexts:

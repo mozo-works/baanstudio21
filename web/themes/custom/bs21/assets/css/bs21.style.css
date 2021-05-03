@@ -10776,6 +10776,13 @@ body.body--search .block--bs21-content > .h2 {
   letter-spacing: 0.3px;
 }
 
+.block--views-block--projects-block-projects-browse-navbar .border-bottom {
+  margin-bottom: 3px;
+}
+.block--views-block--projects-block-projects-browse-navbar .border-bottom .views-field-title {
+  line-height: 2.2;
+}
+
 .page--header {
   line-height: 1.42;
   letter-spacing: 0.3px;
