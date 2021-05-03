@@ -1,18 +1,19 @@
 // project: Teaser
 // -----------------------------------------------------------------------------
 .project--teaser {
-    span {
-        display: inline-block;
-    }
+  line-height: 1.7;
+  span {
+    display: inline-block;
+  }
 }
 
 // project: Full
 // -----------------------------------------------------------------------------
 .project--full {
-    &--navbar {
-        margin-bottom: 36px;
-        &--titles {
-            height: 14px;
-        }
+  &--navbar {
+    margin-bottom: 36px;
+    &--titles {
+      height: 14px;
     }
+  }
 }

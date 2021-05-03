@@ -10856,6 +10856,9 @@ body.body--search .block--bs21-content > .h2 {
   margin-right: 0.3rem;
 }
 
+.project--teaser {
+  line-height: 1.7;
+}
 .project--teaser span {
   display: inline-block;
 }
