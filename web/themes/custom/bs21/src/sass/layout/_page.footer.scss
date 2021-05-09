@@ -1,5 +1,8 @@
 // Page: Footer
 // -----------------------------------------------------------------------------
 .page--footer {
-    padding: 40px 0;
+  padding: 40px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
 }

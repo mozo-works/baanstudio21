@@ -30,7 +30,7 @@
   {% endif %}
 
   {% if view_mode == 'full' %}
-    <div class="col-lg-4 project--description">
+    <div class="col-md-4 project--description">
       <h1 id="page--title">
         <span class="active">{{ label }}</span>
         <p>{{ content.field_info_list }}<p>
@@ -40,10 +40,10 @@
       {{ content.field_info }}
       {{ content.body }}
     </div>
-    <div class="col-lg-6 offset-lg-1">
+    <div class="col-md-6 offset-md-1">
       {{ content.field_works }}
     </div>
-    <div class="col-lg-1">
+    <div class="col-md-1">
       <nav id="nav-work-types" class="position-fixed text-end">
         {{ work_types }}
       </nav>
@@ -51,7 +51,7 @@
   {% endif %}
 </article>
 {% if view_mode == 'full' %}
-<div class="project--navbar row" style="margin-top: 190px; margin-bottom: 120px;">
+<div class="project--navbar row">
   <div class="col">
     {% if prev %}
     <a href="{{ path('entity.node.canonical', {'node': prev.id }) }}" title="{{ prev.label }}">&lt; Prev</a>
