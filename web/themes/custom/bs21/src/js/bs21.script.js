@@ -1,4 +1,7 @@
 import 'bootstrap/dist/js/bootstrap.bundle.js'
+import vars from '../sass/bs21.style.scss'
+
+console.log(vars);
 
 (function ($, Drupal) {
   'use strict';
@@ -12,11 +15,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
   Drupal.behaviors.setWidthWorkTypeNav = {
     attach: function (context) {
       if ($('.project--full').length > 0) {
-        let col = $('.project--full .col-lg-1');
+        let col = $('.project--full .col-md-1');
         $('#nav-work-types').width(col.width());
       }
     }
   }
+
+  Drupal.behaviors.fixByScreen = {
+    attach: function (context) {
+      console.log(Drupal);
+    }
+  };
 
   $(function () {
     $('#try-search').on('click', e => {
