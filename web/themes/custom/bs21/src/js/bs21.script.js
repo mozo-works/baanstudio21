@@ -33,8 +33,12 @@ let mediaDown = (breakpoint) => {
         $('#search-input').css('maxWidth', '70px')
       }
       if (mediaDown('xxl')) {
+        console.log('xxl');
         $('.card--project .project--teaser span').css('marginTop', '9px')
         $('#search-input').css('maxWidth', '130px')
+      }
+      if (mediaDown('mbp')) {
+        $('#search-input').css('maxWidth', '140px')
       }
     }
   }
@@ -56,7 +60,7 @@ let mediaDown = (breakpoint) => {
     }
 
     let footerBottom = window.screen.height - $('#site-footer').offset().top
-    if (footerBottom > 70) {
+    if (footerBottom > 70 && footerBottom - 250 > 0) {
       $('#site-footer').css('marginTop', footerBottom - 250)
       $('#btn-top').addClass('d-none')
     }
