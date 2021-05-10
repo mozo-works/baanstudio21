@@ -24,5 +24,13 @@ $line-height-sm: 1.25;
 $line-height-lg: 2;
 
 $grid-gutter-width: 1.5rem;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 $border-color: $gray-600;

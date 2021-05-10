@@ -525,7 +525,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-      css_class: 'row me-0'
+      css_class: 'row me-3'
     cache_metadata:
       max-age: -1
       contexts:
