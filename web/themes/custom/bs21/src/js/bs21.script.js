@@ -28,6 +28,11 @@ let mediaDown = (breakpoint) => {
     attach: function (context) {
       if (mediaDown('sm')) {
         $('#search-input').css('maxWidth', '140px')
+        $('#global-nav .navbar-nav.row.w-100').height($(window).height())
+          .append('<li class="position-absolute" style="bottom: 90px;">© Baan Studio</a>');
+        if ($('.projects-browse').length > 0) {
+          $('.projects-browse .row pe-3').hide();
+        }
       }
       if (mediaDown('xl')) {
         $('#search-input').css('maxWidth', '70px')
