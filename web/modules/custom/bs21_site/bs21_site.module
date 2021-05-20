@@ -3,14 +3,13 @@
 /**
  * @file
  * Primary module hooks for bs21_site module.
- *
- * @DCG
- * This file is no longer required in Drupal 8.
- * @see https://www.drupal.org/node/2217931
  */
 
 use Drupal\config_pages\Entity\ConfigPages;
 
+/**
+ * Return config for about page.
+ */
 function bs21_site_config($id) {
   return ConfigPages::config($id);
 }

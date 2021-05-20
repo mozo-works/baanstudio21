@@ -8,7 +8,7 @@
 
 <header{{ header_attributes }}>
 {% embed '@bs21/navbar/navbar.twig' with {
-  placement: 'sticky-top'
+  contents: navbar_contents
 } %}
   {% block branding %}
     {% if page.navbar_branding %}
