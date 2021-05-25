@@ -145,6 +145,9 @@ body {
   padding-top: 133px;
   word-wrap: break-word;
   word-break: keep-all;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
 }
 
 .navbar--secondary {

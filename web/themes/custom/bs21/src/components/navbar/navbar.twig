@@ -23,7 +23,7 @@
         </li>
         <li class="nav-item col-lg-4">
           <a class="text-end" id="try-search" href="#">Search</a>
-          <div id="search-block" class="ps-3{% if keys %} position-absolute{% else%} d-none{% endif %}">
+          <div id="search-block" class="ps-3{% if not keys %} d-none{% endif %}">
             <form action="/search/node">
               <input id="search-input" name="keys" class="border-bottom text-start d-inline-block"{% if keys %} value="{{ keys }}"{% endif %}>
             </form>
@@ -41,18 +41,16 @@
                 {{ contents.projects_list }}
               </div>
             {% endif %}
-            {% if contents.search %}
-              <div id="content--search" class="inner-content d-none">
-                {{ contents.search }}
-              </div>
-            {% endif %}
+            <div id="content--search" class="inner-content d-none">
+              {{ contents.search }}
+            </div>
             {% if contents.about %}
               <div id="content--about" class="inner-content d-none">
                 {{ contents.about }}
               </div>
             {% endif %}
           </div>
-          <footer id="navbarFooter" class="mt-5 page--footer text-start position-absolute">
+          <footer id="navbarFooter" class="mt-5 page--footer text-start w-100 position-absolute">
             <div class="d-inline-block float-end" id="navbar--btn-top">Up</div>
             <div class="d-inline-block">© Baan Studio</div>
           </footer>

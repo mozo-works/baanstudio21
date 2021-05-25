@@ -1,6 +1,8 @@
 import 'bootstrap/dist/js/bootstrap.bundle.js'
 import vars from '../sass/export.scss'
 
+import BigPicture from 'bigpicture'
+
 let mediaDown = (breakpoint) => {
   return window.matchMedia("(max-width:" + vars[breakpoint] + ")").matches
 }
@@ -43,13 +45,12 @@ let mediaDown = (breakpoint) => {
           $('#search-input').css('maxWidth', '130px')
         }
         if (mediaDown('mbp')) {
-          $('#search-input').css('maxWidth', '140px')
+          $('#search-input').css('maxWidth', '130px')
         }
       })
     }
   }
   function initNavbar(settings) {
-    console.log('initNavbar')
     $('#search-input').css('maxWidth', '140px')
     $('#global-nav .container-fluid, #global-nav .container-fluid .navbar-nav').removeClass('row');
     $('#navbarSupportedContent').removeClass('ps-2')
@@ -60,19 +61,33 @@ let mediaDown = (breakpoint) => {
       $('#navbarFooter').css('bottom', '+=40')
     }
     $('#navbarInnerContainer').removeClass('d-none')
+    $('#navbarInnerContainer .inner-content').addClass('d-none')
+    $('#search-block form').on('submit', e => {
+      e.preventDefault();
+      let keyword = $('#search-input').val()
+      $('#content--search').removeClass('d-none')
+        .load('/search/node?keys=' + keyword + ' .page--content .list-unstyled')
+      $('#navbarInner').css('minHeight', $(window).height() - 217 + 'px')
+      if ($('#content--search').height() < 380) {
+        $('#navbarInner').css('minHeight', $(window).height() - 215 + 'px')
+        $('#navbarFooter').addClass('position-absolute').css('bottom', 0)
+      }
+    })
   }
   function resetNavbar() {
     $('body').removeClass('noscroll');
     let activeClass = 'text-dark border-bottom pb-1'
     $('#navbarSupportedContent li a').removeClass(activeClass)
       .closest('.nav-item').removeClass('text-start')
+    $('#navbarFooter').addClass('position-absolute')
     $('#navbarInnerContent .inner-content').addClass('d-none')
+    $('#search-block').addClass('d-none')
   }
   function activeNavbarItem(target) {
     resetNavbar()
     $('body').addClass('noscroll')
     $('#navbarSupportedContent').css({
-      'height': $(window).height() - 44 + 'px',
+      'height': $(window).height() - 39 + 'px',
       'overflowY': 'scroll'
     })
     let activeClass = 'text-dark border-bottom pb-1'
@@ -83,11 +98,22 @@ let mediaDown = (breakpoint) => {
     if (targetId) {
       $('#content--' + targetId).removeClass('d-none')
     }
+    // 검색
+    else {
+      if ($('#content--search').height() < 380) {
+        $('#navbarFooter').addClass('position-absolute')
+      }
+    }
   }
 
   $(function () {
     $('#try-search').on('click', e => {
-      $('#search-block').removeClass('d-none').addClass('position-absolute')
+      if ($('#search-block').hasClass('d-none')) {
+        $('#search-block').removeClass('d-none')
+      }
+      else {
+        $('#search-block').addClass('d-none')
+      }
     })
 
     if ($('#nav-work-types').length > 0) {
@@ -110,6 +136,24 @@ let mediaDown = (breakpoint) => {
     $('#navbarSupportedContent').on('hide.bs.collapse', e => {
       resetNavbar()
     })
+
+    if (!mediaDown('sm')) {
+      $('.project--full .works__field-media img').on('click', e => {
+        e.preventDefault();
+        let images = Array.from(
+            document.querySelectorAll('.works__field-media img')
+          ).map(img => {
+          return { src: img.src.replace('thumbnail', 'x_large') }
+        })
+        BigPicture({
+          el: e.target,
+          gallery: images,
+          noLoader: true,
+        })
+        // Make available globally
+        window.BigPicture = BigPicture
+      })
+    }
 
   })
 
