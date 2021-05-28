@@ -3,7 +3,7 @@
 
 body {
   position: relative;
-  background-color: #fcfcfc;
+  background-color: $bg-color;
   &.#{&}--search {
     .block--bs21-primary-local-tasks,
     .block--bs21-content > #search-form,
@@ -26,7 +26,7 @@ body {
 
 .page--header.sticky-top {
   padding-top: 40px;
-  background-color: #fcfcfc;
+  background-color: $bg-color;
   #global-nav {
     .container-fluid.row {
       padding-left: 40px;
@@ -47,7 +47,7 @@ body {
     #navbarInnerContainer {
       width: 95%;
       #navbarInner {
-        background-color: #fcfcfc;
+        background-color: $bg-color;
       }
       #navbarInnerContent {
         display: block !important;
@@ -97,7 +97,7 @@ body {
 
     #navbarSupportedContent {
       text-align: center;
-      background-color: #fcfcfc;
+      background-color: $bg-color;
       @include media-breakpoint-down(lg) {
         #navbarInnerContent {
           text-align: left;
@@ -110,7 +110,7 @@ body {
       .navbar-nav.w-100 {
         padding-top: 45px;
         padding-bottom: 15px;
-        background-color: #fcfcfc;
+        background-color: $bg-color;
         display: block !important;
         position: absolute;
         width: 100% !important;
