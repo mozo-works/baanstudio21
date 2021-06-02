@@ -149,6 +149,24 @@ let mediaDown = (breakpoint) => {
           el: e.target,
           gallery: images,
           noLoader: true,
+          animationStart: () => {
+            $('#bp_container .bp-x').css({
+              'width': '20px', 'height': '29px',
+              'top': '43px', 'right': '42px'
+            })
+            $('#bp_container .bp-x svg').css({'fill': '#000'})
+
+            $('#bp_container img').css('maxHeight', '100%')
+
+            $('#bp_container .bp-lr').css('width', '5.5%')
+            $('#bp_container .bp-lr svg')
+              .attr('fill', '#000')
+              .attr('height', '29px');
+            $('.bp-lr').css('opacity', '1')
+          },
+          onChangeImage: () => {
+            $('#bp_container img').css('maxHeight', '100%')
+          }
         })
         // Make available globally
         window.BigPicture = BigPicture

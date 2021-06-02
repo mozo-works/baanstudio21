@@ -11,3 +11,11 @@
     padding-top: 133px !important;
   }
 }
+
+#bp_container {
+  @include background-opacity($bg-color, 0.7);
+}
+
+#bp_count, #bp_caption {
+  display: none;
+}
