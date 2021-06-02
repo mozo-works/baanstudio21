@@ -77,37 +77,6 @@ let mediaDown = (breakpoint) => {
     $('#navbarSupportedContent li a').removeClass('ms-2')
     $('#navbarInner').css('minHeight', $(window).height() + 'px')
   }
-  function resetNavbar() {
-    $('body').removeClass('noscroll');
-    let activeClass = 'text-dark border-bottom pb-1'
-    $('#navbarSupportedContent li a').removeClass(activeClass)
-      .closest('.nav-item').removeClass('text-start')
-    $('#navbarFooter').addClass('position-absolute')
-    $('#navbarInnerContent .inner-content').addClass('d-none')
-    $('#search-block').addClass('d-none')
-  }
-  function activeNavbarItem(target) {
-    resetNavbar()
-    $('body').addClass('noscroll')
-    $('#navbarSupportedContent').css({
-      'height': $(window).height() - 39 + 'px',
-      'overflowY': 'scroll'
-    })
-    let activeClass = 'text-dark border-bottom pb-1'
-    let targetId = $(target).data('target');
-    $(target).addClass(activeClass)
-      .closest('.nav-item').addClass('text-start')
-    $('#navbarFooter').removeClass('position-absolute')
-    if (targetId) {
-      $('#content--' + targetId).removeClass('d-none')
-    }
-    // 검색
-    else {
-      if ($('#content--search').height() < 380) {
-        $('#navbarFooter').addClass('position-absolute')
-      }
-    }
-  }
 
   $(function () {
     $('#try-search').on('click', e => {
@@ -135,10 +104,6 @@ let mediaDown = (breakpoint) => {
       $('#site-footer').css('marginTop', footerBottom - 250)
       $('#btn-top, #navbar--btn-top').addClass('d-none')
     }
-
-    $('#navbarSupportedContent').on('hide.bs.collapse', e => {
-      resetNavbar()
-    })
 
     if (!mediaDown('sm')) {
       $('.project--full .works__field-media img').on('click', e => {
