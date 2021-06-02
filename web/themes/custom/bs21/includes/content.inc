@@ -28,9 +28,11 @@ function bs21_preprocess_node(&$vars) {
       $vars['prev'] = Node::load($prev_nid);
       $vars['next'] = Node::load($next_nid);
 
-      $dates = explode('-', $vars['content']['field_year_month'][0]['#text']);
-      $dates[] = '';
-      $vars['content']['field_year_month'][0]['#text'] = implode('. ', $dates);
+      if (!empty($vars['content']['field_year_month'])) {
+        $dates = explode('-', $vars['content']['field_year_month'][0]['#text']);
+        $dates[] = '';
+        $vars['content']['field_year_month'][0]['#text'] = implode('. ', $dates);
+      }
 
       $works = $vars['node']->field_works->referencedEntities();
       $work_types = [
