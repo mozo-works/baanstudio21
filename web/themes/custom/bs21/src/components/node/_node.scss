@@ -9,13 +9,31 @@
     #page--title,
     .project__field-info {
       margin-bottom: 2.5rem;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 33px;
+      }
     }
     .image__field-media-image {
       margin-bottom: 1.5rem;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+      }
     }
     .project__field-year-month {
       .field__label {
         margin-right: .3rem;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 21px;
+      #page--title {
+        font-size: 12px;
+        line-height: 21px;
+      }
+      .project__field-info-list {
+        display: none;
       }
     }
   }

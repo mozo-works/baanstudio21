@@ -48,7 +48,7 @@ let mediaDown = (breakpoint) => {
           })
           $('.card--project .project--teaser .project__field-info-list').css({'fontSize': '10px'})
 
-          // 모바일 아카이브 링크 텍스트 목록
+          // 프로젝트 아카이브 텍스트 목록
           let projectBrowseNavbar = $('.block--views-block--projects-block-projects-browse-navbar')
           let projectTitles = projectBrowseNavbar.find('.project--title')
           if (projectTitles.length > 0) {
@@ -57,6 +57,14 @@ let mediaDown = (breakpoint) => {
                 $(title).siblings('.project--year').height($(title).height())
               }
             })
+          }
+
+          // 프로젝트 상세
+          let projectFull = $('.project--full');
+          if (projectFull.length > 0) {
+            $('#nav-work-types').removeClass('position-fixed')
+              .addClass('float-end').css('marginBottom', '-36px')
+              .prependTo($('#page--title'));
           }
         }
       })

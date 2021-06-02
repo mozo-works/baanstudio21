@@ -6,7 +6,6 @@
  */
 
 use Drupal\Core\Template\Attribute;
-use Drupal\bs21_site\Controller\Bs21SiteController;
 
 /**
  * Implements hook_preprocess_page().
@@ -29,20 +28,6 @@ function bs21_preprocess_page(&$vars) {
     $vars['main_content_attributes']['class'][] = 'd-flex';
     $vars['main_header_attributes']['class'][] = 'd-none';
   }
-
-  // 모바일 메뉴 콘텐츠 추가.
-  // 1. 프로젝트 텍스트 목록.
-  $vars['navbar_contents']['projects_list'] = [
-    '#type' => 'view',
-    '#name' => 'projects',
-    '#display_id' => 'block_projects_browse_navbar',
-  ];
-
-  $vars['navbar_contents']['search'] = '';
-
-  // 3. 소개 화면.
-  $about_content = Bs21SiteController::aboutContent();
-  $vars['navbar_contents']['about'] = $about_content;
 
 }
 

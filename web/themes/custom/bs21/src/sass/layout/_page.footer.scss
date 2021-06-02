@@ -3,6 +3,7 @@
 .page--footer {
   padding: 40px 0;
   @include media-breakpoint-down(sm) {
-    padding: 0;
+    padding: 0 0 21px 0;
+    font-size: 12px;
   }
 }
