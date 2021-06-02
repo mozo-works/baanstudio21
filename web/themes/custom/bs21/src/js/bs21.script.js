@@ -57,6 +57,9 @@ let mediaDown = (breakpoint) => {
                 $(title).siblings('.project--year').height($(title).height())
               }
             })
+            $('.row header').css('padding', 0)
+            $('.row.me-3').removeClass('me-3').addClass('me-1')
+            $('.border-bottom.ms-3').removeClass('ms-3').addClass('ms-1')
           }
 
           // 프로젝트 상세
@@ -65,6 +68,12 @@ let mediaDown = (breakpoint) => {
             $('#nav-work-types').removeClass('position-fixed')
               .addClass('float-end').css('marginBottom', '-36px')
               .prependTo($('#page--title'));
+          }
+
+          // about
+          let aboutPage = $('.body--about')
+          if (aboutPage.length >  0) {
+            $('.block--bs21-page-title, .block--bs21-content p:first-of-type').hide()
           }
         }
       })
