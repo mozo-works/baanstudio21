@@ -2,6 +2,9 @@
 // -----------------------------------------------------------------------------
 .card--project {
   margin-bottom: 34px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0;
+  }
   @media (min-width: 1441px) {
     height: 485px; /* if xxl */
   }

@@ -20,7 +20,7 @@ body {
 .container-fluid.page {
   padding: 0 40px;
   @include media-breakpoint-down(sm) {
-    padding: 0 12px;
+    padding: 0 20px;
   }
 }
 
@@ -36,8 +36,12 @@ body {
   @include media-breakpoint-down(sm) {
     padding-top: 6px;
     #global-nav {
-      .container-fluid.row {
-        padding-left: 12px;
+      padding-bottom: 0 !important;
+      .container-fluid {
+        padding: 0 20px;
+        .nav-item {
+          margin-bottom: 68px !important;
+        }
       }
     }
     .navbar-toggler {
@@ -108,7 +112,7 @@ body {
         }
       }
       .navbar-nav.w-100 {
-        padding-top: 45px;
+        padding-top: 65px;
         padding-bottom: 15px;
         background-color: $bg-color;
         display: block !important;

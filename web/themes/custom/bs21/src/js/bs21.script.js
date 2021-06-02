@@ -27,25 +27,37 @@ let mediaDown = (breakpoint) => {
   Drupal.behaviors.fixByScreen = {
     attach: function (context, settings) {
       $('body', context).once('responsive').each(() => {
-        if (mediaDown('md')) {
-          initNavbar(settings)
-          $('.navbar-nav a').on('click', function(e){
-            e.preventDefault()
-            activeNavbarItem(e.target)
-          })
-          if ($('.projects-browse').length > 0) {
-            $('.projects-browse .row.pe-3').hide()
-          }
-        }
-        if (mediaDown('xl')) {
-          $('#search-input').css('maxWidth', '70px')
+        if (mediaDown('mbp')) {
+          $('#search-input').css('maxWidth', '130px')
         }
         if (mediaDown('xxl')) {
           $('.card--project .project--teaser span').css('marginTop', '9px')
           $('#search-input').css('maxWidth', '130px')
         }
-        if (mediaDown('mbp')) {
-          $('#search-input').css('maxWidth', '130px')
+        if (mediaDown('xl')) {
+          $('#search-input').css('maxWidth', '70px')
+        }
+        if (mediaDown('md')) {
+          initNavbar(settings)
+          if ($('.projects-browse').length > 0) {
+            $('.projects-browse .row.pe-3').hide()
+          }
+          $('.card--project .project--teaser span').css({
+            'marginTop': '11px',
+            'fontSize': '12px',
+          })
+          $('.card--project .project--teaser .project__field-info-list').css({'fontSize': '10px'})
+
+          // 모바일 아카이브 링크 텍스트 목록
+          let projectBrowseNavbar = $('.block--views-block--projects-block-projects-browse-navbar')
+          let projectTitles = projectBrowseNavbar.find('.project--title')
+          if (projectTitles.length > 0) {
+            projectTitles.each( (i, title) => {
+              if ($(title).height() > 20) {
+                $(title).siblings('.project--year').height($(title).height())
+              }
+            })
+          }
         }
       })
     }
@@ -56,23 +68,6 @@ let mediaDown = (breakpoint) => {
     $('#navbarSupportedContent').removeClass('ps-2')
     $('#navbarSupportedContent li a').removeClass('ms-2')
     $('#navbarInner').css('minHeight', $(window).height() + 'px')
-    // 툴바있는 경우 하단 푸터 위치 조정.
-    if (settings.toolbar) {
-      $('#navbarFooter').css('bottom', '+=40')
-    }
-    $('#navbarInnerContainer').removeClass('d-none')
-    $('#navbarInnerContainer .inner-content').addClass('d-none')
-    $('#search-block form').on('submit', e => {
-      e.preventDefault();
-      let keyword = $('#search-input').val()
-      $('#content--search').removeClass('d-none')
-        .load('/search/node?keys=' + keyword + ' .page--content .list-unstyled')
-      $('#navbarInner').css('minHeight', $(window).height() - 217 + 'px')
-      if ($('#content--search').height() < 380) {
-        $('#navbarInner').css('minHeight', $(window).height() - 215 + 'px')
-        $('#navbarFooter').addClass('position-absolute').css('bottom', 0)
-      }
-    })
   }
   function resetNavbar() {
     $('body').removeClass('noscroll');
