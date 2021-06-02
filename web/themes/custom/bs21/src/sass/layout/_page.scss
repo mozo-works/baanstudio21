@@ -17,8 +17,17 @@ body {
   }
 }
 
+@include media-breakpoint-up(md) {
+  .row > * {
+    padding: 0 9px;
+  }
+}
+
 .container-fluid.page {
   padding: 0 40px;
+  @include media-breakpoint-up(md) {
+    padding: 0 30px;
+  }
   @include media-breakpoint-down(sm) {
     padding: 0 20px;
   }
@@ -33,38 +42,6 @@ body {
     }
   }
 
-  @include media-breakpoint-down(sm) {
-    padding-top: 22px;
-    #global-nav {
-      padding-bottom: 0 !important;
-      .container-fluid {
-        padding: 0 20px;
-        .nav-item {
-          margin-bottom: 68px !important;
-        }
-      }
-    }
-    .navbar-toggler {
-      // margin-right: -24px;
-      margin-top: -6px;
-    }
-    #navbarInnerContainer {
-      width: 95%;
-      #navbarInner {
-        background-color: $bg-color;
-      }
-      #navbarInnerContent {
-        display: block !important;
-      }
-      #navbarFooter {
-        bottom: 205px;
-        display: block !important;
-      }
-      #content--projects-list {
-        margin-top: 40px;
-      }
-    }
-  }
   @include media-breakpoint-down(lg) {
     .navbar-nav.w-100 .row > * {
       width: auto;
@@ -130,6 +107,52 @@ body {
     }
 
   }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 36px;
+    padding-bottom: 8px;
+    #global-nav {
+      padding-bottom: 0 !important;
+      .container-fluid {
+        padding: 0 30px;
+        .nav-item {
+          margin-bottom: 68px !important;
+        }
+      }
+    }
+    .navbar-toggler {
+      margin-top: -6px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    #global-nav {
+      padding-bottom: 0 !important;
+      .container-fluid {
+        padding: 0 30px;
+        .nav-item {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 22px;
+    #global-nav {
+      padding-bottom: 0 !important;
+      .container-fluid {
+        padding: 0 20px;
+        .nav-item {
+          margin-bottom: 68px !important;
+        }
+      }
+    }
+    .navbar-toggler {
+      margin-top: -6px;
+    }
+  }
+
 }
 
 .active {
@@ -149,6 +172,9 @@ body {
   padding-top: 133px;
   word-wrap: break-word;
   word-break: keep-all;
+  @include media-breakpoint-up(md) {
+    padding-top: 42px;
+  }
   @include media-breakpoint-down(sm) {
     padding-top: 0;
   }
@@ -156,6 +182,9 @@ body {
 
 .navbar--secondary {
   margin-bottom: 105px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+  }
 }
 
 #btn-top {
@@ -173,10 +202,24 @@ body {
 }
 
 .block--views-block--projects-block-projects-browse-navbar {
+  margin-top: 133px;
   .border-bottom {
     margin-bottom: 3px;
     .views-field-title {
       line-height: 2.2;
     }
+  }
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 13px;
+    line-height: 23px;
+    .project--title {
+      display: inline-block;
+      max-width: 314px;
+    }
+  }
+  @media (min-width: 769px) {
+    margin-top: 133px;
   }
 }

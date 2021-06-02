@@ -29,11 +29,11 @@ class Bs21SiteController extends ControllerBase {
       $grids = [5, 3, 3];
       $build[$order] = [
         '#type' => 'container',
-        '#attributes' => ['class' => ['col-md-' . $grids[$order]]],
+        '#attributes' => ['class' => ['col-lg-' . $grids[$order]]],
         'content' => ['#markup' => $column['value']],
       ];
       if ($order == 1) {
-        $build[$order]['#attributes']['class'][] = 'offset-md-1';
+        $build[$order]['#attributes']['class'][] = 'offset-lg-1';
       }
     }
 

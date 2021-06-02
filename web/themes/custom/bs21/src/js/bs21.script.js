@@ -6,6 +6,10 @@ import BigPicture from 'bigpicture'
 let mediaDown = (breakpoint) => {
   return window.matchMedia("(max-width:" + vars[breakpoint] + ")").matches
 }
+let mediaUp = (breakpoint) => {
+  console.log(breakpoint, "(min-width:" + vars[breakpoint] + ")")
+  return window.matchMedia("(min-width:" + vars[breakpoint] + ")").matches
+}
 
 (function ($, Drupal) {
   'use strict'
@@ -75,6 +79,14 @@ let mediaDown = (breakpoint) => {
           if (aboutPage.length >  0) {
             $('.block--bs21-page-title, .block--bs21-content p:first-of-type').hide()
           }
+        }
+
+        if (mediaUp('md')) {
+          $('.card--project .project--teaser span').css({
+            'marginTop': '16px',
+            'fontSize': '13px',
+          })
+          $('.card--project .project--teaser .project__field-info-list').css({ 'fontSize': '12px' })
         }
       })
     }
