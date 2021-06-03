@@ -10762,6 +10762,9 @@ body.noscroll {
 }
 
 @media (min-width: 768px) {
+  .row {
+    margin: 0 -9px;
+  }
   .row > * {
     padding: 0 9px;
   }
@@ -10772,6 +10775,11 @@ body.noscroll {
 @media (min-width: 768px) {
   .container-fluid.page, .page.container-sm, .page.container-md, .page.container-lg, .page.container-xl, .page.container-xxl {
     padding: 0 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid.page, .page.container-sm, .page.container-md, .page.container-lg, .page.container-xl, .page.container-xxl {
+    padding: 0 33px;
   }
 }
 @media (max-width: 575.98px) {
@@ -10850,6 +10858,14 @@ body.noscroll {
     position: relative;
   }
 }
+@media (min-width: 1200px) {
+  .page--header.sticky-top {
+    padding-top: 28px;
+  }
+  .page--header.sticky-top #global-nav .container-fluid.row, .page--header.sticky-top #global-nav .row.container-sm, .page--header.sticky-top #global-nav .row.container-md, .page--header.sticky-top #global-nav .row.container-lg, .page--header.sticky-top #global-nav .row.container-xl, .page--header.sticky-top #global-nav .row.container-xxl {
+    padding: 0 33px;
+  }
+}
 @media (min-width: 768px) {
   .page--header.sticky-top {
     padding-top: 36px;
@@ -10925,6 +10941,11 @@ body.noscroll {
 @media (min-width: 768px) {
   .block--content {
     padding-top: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  .block--content {
+    padding-top: 47px;
   }
 }
 @media (max-width: 575.98px) {
@@ -11083,6 +11104,11 @@ body.noscroll {
 .page--footer {
   padding: 40px 0;
 }
+@media (min-width: 1200px) {
+  .page--footer {
+    padding-bottom: 36px;
+  }
+}
 @media (max-width: 575.98px) {
   .page--footer {
     padding: 0 0 21px 0;
@@ -11110,6 +11136,11 @@ body.noscroll {
 @media (min-width: 768px) {
   .node.project--full .image__field-media-image {
     margin-bottom: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .node.project--full .image__field-media-image {
+    margin-bottom: 18px;
   }
 }
 @media (max-width: 575.98px) {
@@ -11173,6 +11204,11 @@ body.noscroll {
 
 .card--project {
   margin-bottom: 34px;
+}
+@media (min-width: 1200px) {
+  .card--project {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 991.98px) {
   .card--project {

@@ -22,7 +22,7 @@ let mediaUp = (breakpoint) => {
   Drupal.behaviors.setWidthWorkTypeNav = {
     attach: function () {
       if ($('.project--full').length > 0) {
-        let col = $('.project--full .col-md-1')
+        let col = $('.project--full .col-lg-1')
         $('#nav-work-types').width(col.width())
       }
     }
@@ -87,6 +87,27 @@ let mediaUp = (breakpoint) => {
           })
           $('.card--project .project--teaser .project__field-info-list').css({ 'fontSize': '12px' })
         }
+
+        if (mediaUp('xl')) {
+          $('#navbarSupportedContent').css({
+            "marginLeft": "3px",
+            "marginRight": "-25px"
+          })
+          if ($('#search-block').hasClass('d-none')) {
+            console.log($('#search-block').width())
+          }
+          $('#search-input').addClass('w-100').css({
+            'maxWidth': '158px',
+            'position': 'absolute',
+            'marginTop': '-14px',
+          }).closest('.nav-item').addClass('pe-0')
+          $('.card--project .project--teaser span').css({
+            'marginTop': '15px',
+            'lineHeight': '19px',
+            'fontSize': '13px',
+          })
+          $('.card--project .project--teaser .project__field-info-list').css({ 'fontSize': '11px' })
+        }
       })
     }
   }
@@ -99,8 +120,8 @@ let mediaUp = (breakpoint) => {
   }
 
   $(function () {
-  /*
     $('#try-search').on('click', e => {
+      e.preventDefault()
       if ($('#search-block').hasClass('d-none')) {
         $('#search-block').removeClass('d-none')
       }
@@ -108,7 +129,6 @@ let mediaUp = (breakpoint) => {
         $('#search-block').addClass('d-none')
       }
     })
-  */
     if ($('#nav-work-types').length > 0) {
       // 클릭 시 active.
       $('#nav-work-types a').on('click', e => {

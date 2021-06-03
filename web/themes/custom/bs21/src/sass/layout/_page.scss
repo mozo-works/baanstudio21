@@ -18,8 +18,11 @@ body {
 }
 
 @include media-breakpoint-up(md) {
-  .row > * {
-    padding: 0 9px;
+  .row {
+    margin: 0 -9px;
+    & > * {
+      padding: 0 9px;
+    }
   }
 }
 
@@ -27,6 +30,9 @@ body {
   padding: 0 40px;
   @include media-breakpoint-up(md) {
     padding: 0 30px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 0 33px;
   }
   @include media-breakpoint-down(sm) {
     padding: 0 20px;
@@ -41,7 +47,6 @@ body {
       padding-left: 40px;
     }
   }
-
   @include media-breakpoint-down(lg) {
     .navbar-nav.w-100 .row > * {
       width: auto;
@@ -106,6 +111,15 @@ body {
       }
     }
 
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 28px;
+    #global-nav {
+      .container-fluid.row {
+        padding: 0 33px;
+      }
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -179,6 +193,9 @@ body {
   word-break: keep-all;
   @include media-breakpoint-up(md) {
     padding-top: 42px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 47px;
   }
   @include media-breakpoint-down(sm) {
     padding-top: 0;

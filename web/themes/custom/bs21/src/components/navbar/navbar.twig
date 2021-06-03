@@ -25,12 +25,13 @@
           <a class="text-end" data-target="about" href="/about">About</a>
         </li>
         <li class="nav-item col-lg-4">
-          <a class="text-end" id="try-search" href="/search/node">Search</a>
-          {# <div id="search-block" class="ps-3{% if not keys %} d-none{% endif %}">
+          <a class="text-end d-lg-none" href="/search/node">Search</a>
+          <a class="d-none d-lg-inline-block" id="try-search" href="#">Search</a>
+          <div id="search-block" class="ps-3{% if not keys %} d-none{% endif %}">
             <form action="/search/node">
               <input id="search-input" name="keys" class="border-bottom text-start d-inline-block"{% if keys %} value="{{ keys }}"{% endif %}>
             </form>
-          </div> #}
+          </div>
         </li>
       </ul>
       <div id="navbarInnerContainer" class="d-none w-100">
