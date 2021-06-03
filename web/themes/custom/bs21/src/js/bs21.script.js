@@ -99,6 +99,7 @@ let mediaUp = (breakpoint) => {
   }
 
   $(function () {
+  /*
     $('#try-search').on('click', e => {
       if ($('#search-block').hasClass('d-none')) {
         $('#search-block').removeClass('d-none')
@@ -107,7 +108,7 @@ let mediaUp = (breakpoint) => {
         $('#search-block').addClass('d-none')
       }
     })
-
+  */
     if ($('#nav-work-types').length > 0) {
       // 클릭 시 active.
       $('#nav-work-types a').on('click', e => {

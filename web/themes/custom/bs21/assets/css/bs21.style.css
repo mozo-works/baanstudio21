@@ -10866,6 +10866,7 @@ body.noscroll {
   }
   .page--header.sticky-top .navbar-toggler {
     margin-top: -6px;
+    margin-right: -6px;
   }
 }
 @media (min-width: 769px) {
@@ -11004,6 +11005,11 @@ body.noscroll {
   line-height: 1.42;
   letter-spacing: 0.3px;
   margin-bottom: 36px;
+}
+@media (min-width: 768px) {
+  .page--header {
+    margin-bottom: 23px;
+  }
 }
 @media (max-width: 575.98px) {
   .page--header {

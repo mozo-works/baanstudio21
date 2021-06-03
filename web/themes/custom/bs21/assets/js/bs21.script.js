@@ -8351,14 +8351,16 @@ var mediaUp = function mediaUp(breakpoint) {
   }
 
   $(function () {
-    $('#try-search').on('click', function (e) {
-      if ($('#search-block').hasClass('d-none')) {
-        $('#search-block').removeClass('d-none');
-      } else {
-        $('#search-block').addClass('d-none');
-      }
-    });
-
+    /*
+      $('#try-search').on('click', e => {
+        if ($('#search-block').hasClass('d-none')) {
+          $('#search-block').removeClass('d-none')
+        }
+        else {
+          $('#search-block').addClass('d-none')
+        }
+      })
+    */
     if ($('#nav-work-types').length > 0) {
       // 클릭 시 active.
       $('#nav-work-types a').on('click', function (e) {
