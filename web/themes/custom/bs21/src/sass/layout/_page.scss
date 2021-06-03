@@ -139,6 +139,10 @@ body {
 
   @include media-breakpoint-down(sm) {
     padding-top: 22px;
+    padding-bottom: 5px;
+    .body--projects--browse & {
+      margin-bottom: 27px;
+    }
     #global-nav {
       padding-bottom: 0 !important;
       .container-fluid {
@@ -185,6 +189,10 @@ body {
   @include media-breakpoint-up(md) {
     margin-bottom: 30px;
   }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
+  }
+
 }
 
 #btn-top {
@@ -219,7 +227,16 @@ body {
       max-width: 314px;
     }
   }
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 24px;
+  }
   @media (min-width: 769px) {
     margin-top: 133px;
+  }
+  @media (max-width: 769px) {
+    margin-top: 0;
   }
 }

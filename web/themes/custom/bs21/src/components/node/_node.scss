@@ -10,7 +10,7 @@
     .project__field-info {
       margin-bottom: 2.5rem;
       @include media-breakpoint-down(sm) {
-        margin-bottom: 33px;
+        margin-bottom: 32px;
       }
     }
     .image__field-media-image {
@@ -69,5 +69,7 @@
   @include media-breakpoint-down(sm) {
     margin-top: 60px;
     margin-bottom: 0px;
+    font-size: 12px;
+    line-height: 24px;
   }
 }

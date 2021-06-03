@@ -7,7 +7,6 @@ let mediaDown = (breakpoint) => {
   return window.matchMedia("(max-width:" + vars[breakpoint] + ")").matches
 }
 let mediaUp = (breakpoint) => {
-  console.log(breakpoint, "(min-width:" + vars[breakpoint] + ")")
   return window.matchMedia("(min-width:" + vars[breakpoint] + ")").matches
 }
 
