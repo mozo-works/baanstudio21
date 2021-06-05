@@ -13,12 +13,20 @@ dependencies:
     - node.type.project
   module:
     - entity_reference_revisions
+    - text
     - user
 id: node.project.teaser
 targetEntityType: node
 bundle: project
 mode: teaser
 content:
+  field_info_list:
+    type: text_default
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
   field_works:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -31,7 +39,6 @@ content:
 hidden:
   body: true
   field_info: true
-  field_info_list: true
   field_weight: true
   field_year_month: true
   langcode: true

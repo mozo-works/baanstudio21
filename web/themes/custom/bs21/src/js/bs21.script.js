@@ -93,11 +93,9 @@ let mediaUp = (breakpoint) => {
             "marginLeft": "3px",
             "marginRight": "-25px"
           })
-          if ($('#search-block').hasClass('d-none')) {
-            console.log($('#search-block').width())
-          }
+          let columnWidth = $('#search-input').closest('.col-lg-4').width() - (45 + 12)
           $('#search-input').addClass('w-100').css({
-            'maxWidth': '158px',
+            'maxWidth': columnWidth + 'px',
             'position': 'absolute',
             'marginTop': '-14px',
           }).closest('.nav-item').addClass('pe-0')
@@ -106,7 +104,29 @@ let mediaUp = (breakpoint) => {
             'lineHeight': '19px',
             'fontSize': '13px',
           })
-          $('.card--project .project--teaser .project__field-info-list').css({ 'fontSize': '11px' })
+          $('.card--project .project--teaser .project__field-info-list')
+            .css({ 'fontSize': '11px' })
+        }
+
+        if (mediaUp('xxl')) {
+          $('#navbarSupportedContent').css({
+            "marginLeft": "9px",
+            "marginRight": "-25px"
+          })
+          let columnWidth = $('#search-input').closest('.col-lg-4').width() - (58 + 8)
+          $('#search-input').addClass('w-100').css({
+            'maxWidth': columnWidth + 'px',
+            'position': 'absolute',
+            'marginTop': '-14px',
+          }).closest('.nav-item').addClass('pe-0')
+          $('.card--project .project--teaser').css('marginBottom', '2px')
+          $('.card--project .project--teaser span').css({
+            'marginTop': '18px',
+            'lineHeight': '25px',
+            'fontSize': '16px',
+          })
+          $('.card--project .project--teaser .project__field-info-list')
+            .css({ 'fontSize': '14px' })
         }
       })
     }
@@ -154,6 +174,7 @@ let mediaUp = (breakpoint) => {
           ).map(img => {
           return { src: img.src.replace('thumbnail', 'x_large') }
         })
+        console.log(images)
         BigPicture({
           el: e.target,
           gallery: images,
@@ -163,18 +184,29 @@ let mediaUp = (breakpoint) => {
               'width': '20px', 'height': '29px',
               'top': '43px', 'right': '42px'
             })
+            $('#bp_aud, #bp_container img, #bp_sv, #bp_vid').css({
+              'maxHeight': '100%', 'maxWidth': '100%',
+            })
             $('#bp_container .bp-x svg').css({'fill': '#000'})
-
-            $('#bp_container img').css('maxHeight', '100%')
-
-            $('#bp_container .bp-lr').css('width', '5.5%')
+            if (mediaUp('xxl')) {
+              $('#bp_container .bp-lr').css('width', '2.3%')
+            }
+            else {
+              $('#bp_container .bp-lr').css('width', '5.5%')
+            }
             $('#bp_container .bp-lr svg')
               .attr('fill', '#000')
               .attr('height', '29px');
             $('.bp-lr').css('opacity', '1')
           },
           onChangeImage: () => {
-            $('#bp_container img').css('maxHeight', '100%')
+            $('#bp_aud, #bp_container img, #bp_sv, #bp_vid').css({
+              'maxHeight': '100%',
+              'height': '100% !important'
+            })
+            if (mediaUp('xxl')) {
+              $('#bp_container .bp-lr').css('width', '2.3%')
+            }
           }
         })
         // Make available globally

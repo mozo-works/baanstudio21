@@ -6,8 +6,7 @@
     padding-left: 0;
   }
   &.project--full {
-    #page--title,
-    .project__field-info {
+    #page--title, .project__field-info {
       margin-bottom: 2.5rem;
       @include media-breakpoint-down(sm) {
         margin-bottom: 32px;
@@ -20,6 +19,9 @@
       }
       @include media-breakpoint-up(xl) {
         margin-bottom: 18px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 24px;
       }
       @include media-breakpoint-down(sm) {
         margin-bottom: 10px;
@@ -40,6 +42,15 @@
       }
       .project__field-info-list {
         display: none;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      #page--title, .project__field-info {
+        font-size: 16px;
+        line-height: 29px;
+      }
+      .project__field-info  {
+        line-height: 23px;
       }
     }
     @include media-breakpoint-down(md) {

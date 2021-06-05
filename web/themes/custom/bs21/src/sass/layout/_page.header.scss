@@ -7,6 +7,9 @@
   @include media-breakpoint-up(md) {
     margin-bottom: 23px;
   }
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 71px;
+  }
   @include media-breakpoint-down(sm) {
     margin-bottom: 58px;
   }
@@ -16,10 +19,16 @@
       align-items: flex-start;
     }
 
-    #site-name a.navbar-brand {
+    #site-name a.navbar-brand,
+    .nav-item a {
       white-space: nowrap;
       font-size: $font-size-base;
       padding: 0;
+      @include media-breakpoint-up(xxl) {
+        margin-left: -1px;
+        font-size: 18px;
+        list-style: 32px;
+      }
     }
 
     .menu--item--list {

@@ -6,14 +6,22 @@
   }
 }
 
-.page.projects-browse {
-  .block--bs21-content {
-    padding-top: 133px !important;
+
+@include media-breakpoint-up(xxl) {
+  .page.projects-browse {
+    .block--bs21-content {
+      padding-top: 23px !important;
+    }
   }
 }
 
+// BigPicture FullScreen layer
 #bp_container {
   @include background-opacity($bg-color, 0.7);
+}
+
+#bp_aud, #bp_container img, #bp_sv, #bp_vid {
+  height: 100% !important;
 }
 
 #bp_count, #bp_caption {
