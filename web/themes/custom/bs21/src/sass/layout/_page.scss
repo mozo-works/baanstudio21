@@ -23,7 +23,7 @@ body {
 @include media-breakpoint-up(md) {
   .row {
     margin: 0 -9px;
-    & > * {
+    :not(.page--header) & > * {
       padding: 0 9px;
     }
   }

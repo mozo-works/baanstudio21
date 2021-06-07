@@ -132,11 +132,18 @@ let mediaUp = (breakpoint) => {
     }
   }
   function initNavbar(settings) {
+    console.log('initNavbar')
     $('#search-input').css('maxWidth', '140px')
     $('#global-nav .container-fluid, #global-nav .container-fluid .navbar-nav').removeClass('row');
     $('#navbarSupportedContent').removeClass('ps-2')
     $('#navbarSupportedContent li a').removeClass('ms-2')
     $('#navbarInner').css('minHeight', $(window).height() + 'px')
+  }
+
+  function undoNavbar(settings) {
+    $('#global-nav .container-fluid, #global-nav .container-fluid .navbar-nav').addClass('row');
+    $('#navbarSupportedContent').addClass('ps-2')
+    $('#navbarSupportedContent li a').addClass('ms-2')
   }
 
   $(function () {
