@@ -4,19 +4,50 @@
 body {
   position: relative;
   background-color: $bg-color;
-  &.#{&}--search {
-    .block--bs21-primary-local-tasks,
-    .block--bs21-content > #search-form,
-    .block--bs21-content > h2 {
-      display: none;
-    }
-  }
   &.noscroll{
     position: fixed;
     overflow: hidden;
   }
   @include media-breakpoint-down(sm) {
     font-size: 12px;
+  }
+}
+
+.body--search {
+  .block--bs21-primary-local-tasks,
+  .block--bs21-content > h2,
+  #edit-basic label,
+  #edit-help-link {
+    display: none;
+  }
+  #edit-keys {
+    all: unset;
+  }
+  #edit-submit {
+    visibility: hidden;
+  }
+  .list-unstyled {
+    border-bottom: 1px dashed #ccc;
+    font-size: 12px;
+    line-height: 22px;
+    &:first-of-type {
+      border-top: 1px dashed #ccc;
+      padding-top: 11px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 13px;
+      line-height: 23px;
+      &:first-of-type {
+        padding-top: 11.5px;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 16px;
+      line-height: 32px;
+      &:first-of-type {
+        padding-top: 18px;
+      }
+    }
   }
 }
 

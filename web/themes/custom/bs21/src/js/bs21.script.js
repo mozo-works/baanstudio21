@@ -93,7 +93,7 @@ let mediaUp = (breakpoint) => {
             "marginLeft": "3px",
             "marginRight": "-25px"
           })
-          let columnWidth = $('#search-input').closest('.col-lg-4').width() - (45 + 12)
+          let columnWidth = $('#search-input').closest('.col-lg-4').width() - (45 + 22)
           $('#search-input').addClass('w-100').css({
             'maxWidth': columnWidth + 'px',
             'position': 'absolute',
