@@ -22,7 +22,7 @@ tips:
   place-block:
     id: place-block
     plugin: text
-    label: 'Place Blocks'
+    label: '블록 배치'
     body: 'Any custom or contributed block can be added to a particular region by clicking on a button Place block. A new block can also be created by clicking on Place Block'
     weight: 2
     attributes:

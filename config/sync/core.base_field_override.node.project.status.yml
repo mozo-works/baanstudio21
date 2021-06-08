@@ -1,0 +1,22 @@
+uuid: f10b53c9-f847-445f-93c9-0478176216f4
+langcode: ko
+status: true
+dependencies:
+  config:
+    - node.type.project
+id: node.project.status
+field_name: status
+entity_type: node
+bundle: project
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 켜기
+  off_label: 끄기
+field_type: boolean
