@@ -26,14 +26,14 @@ class Bs21SiteController extends ControllerBase {
     ];
     $columns = bs21_site_config('about')->field_columns->getValue();
     foreach ($columns as $order => $column) {
-      $grids = [5, 3, 3];
+      $grids = [4, 3, 3];
       $build[$order] = [
         '#type' => 'container',
         '#attributes' => ['class' => ['col-lg-' . $grids[$order]]],
         'content' => ['#markup' => $column['value']],
       ];
       if ($order == 1) {
-        $build[$order]['#attributes']['class'][] = 'offset-lg-1';
+        $build[$order]['#attributes']['class'][] = 'offset-lg-2';
       }
     }
 

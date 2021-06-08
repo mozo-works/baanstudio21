@@ -168,11 +168,14 @@ let mediaUp = (breakpoint) => {
     }
 
     if (!mediaDown('lg')) {
+      // bigPicture 용도로 이미지 마크업 수정
       $('#image-gallery img').each((index, image) => {
         $(image).attr('data-bp', image.src)
         let a = $('<a/>').attr('href', image.src)
         $(image).wrap(a)
       })
+
+      // 프로젝트 상세 화면 이미지 클릭 시 bigPicture 띄우기.
       $('#image-gallery img').on('click', e => {
         e.preventDefault();
         BigPicture({
@@ -221,6 +224,19 @@ let mediaUp = (breakpoint) => {
         // Make available globally
         window.BigPicture = BigPicture
       })
+
+      // 프로젝트 상세 화면 제목 고정.
+      if ($('.project--full').length > 0) {
+        $('#page--title').addClass('position-fixed')
+          .css({
+            'width': $('.project--description').width(),
+            'backgroundColor': '#f8f8f8',
+            'paddingBottom': '30px',
+            'paddingTop': '70px',
+            'marginTop': '-70px'
+          })
+        $('.project__field-info').css('marginTop', '40px')
+      }
     }
 
     // 검색 화면
@@ -234,7 +250,6 @@ let mediaUp = (breakpoint) => {
         $('#search-form').hide();
       }
     }
-
   })
 
 })(jQuery, Drupal)
