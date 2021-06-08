@@ -201,7 +201,7 @@ let mediaUp = (breakpoint) => {
               $('#bp_container .bp-lr').css('width', '2.3%')
             }
             else {
-              $('#bp_container .bp-lr').css('width', '5.5%')
+              $('#bp_container .bp-lr').css('width', '4.3%')
             }
             $('#bp_container .bp-lr svg')
               .attr('fill', '#000')

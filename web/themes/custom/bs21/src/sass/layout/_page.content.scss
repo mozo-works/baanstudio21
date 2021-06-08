@@ -17,7 +17,7 @@
 
 // BigPicture FullScreen layer
 #bp_container {
-  @include background-opacity($bg-color, 0.7);
+  @include background-opacity($white, 0.95);
 }
 
 #bp_aud, #bp_container img, #bp_sv, #bp_vid {
