@@ -81,15 +81,38 @@ function bs21_preprocess_paragraph(&$vars) {
     $items = $vars['content']['field_work_type']['#items'] ?? NULL;
     $count = (!empty($items)) ? count($items) : 0;
     if ($count > 0) {
-      $field_work_type = $vars['content']['field_work_type']['#object']->field_work_type->getValue();
+      $medias = $vars['paragraph']->field_media->referencedEntities();
+      $images = [];
+      foreach ($medias as $media) {
+        $file = $media->field_media_image->entity;
+        $image = \Drupal::service('image.factory')->get($file->getFileUri());
+        $images[] = [
+          '#theme' => 'image_style',
+          '#width' => $image->getWidth(),
+          '#height' => $image->getHeight(),
+          '#style_name' => 'x_large',
+          '#uri' => $file->getFileUri(),
+        ];
+      }
+
+      $work_types = $vars['content']['field_work_type'];
+      unset($vars['content']);
+
+      $field_work_type = $work_types['#object']->field_work_type->getValue();
       $work_type = reset($field_work_type);
       $tid = $work_type['target_id'];
+      $vars['content']['field_work_type'] = $work_types;
       foreach (range(1, $count) as $index) {
         $vars['content']['field_work_type']['#attributes'] = [
           'class' => 'visually-hidden',
           'id' => 'work-type-' . $tid,
         ];
       }
+      $vars['content']['images'] = [
+        '#theme' => 'container',
+        '#attributes' => ['id' => ['image-gallery']],
+        '#children' => $images,
+      ];
     }
   }
 }

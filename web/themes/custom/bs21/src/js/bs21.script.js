@@ -132,7 +132,6 @@ let mediaUp = (breakpoint) => {
     }
   }
   function initNavbar(settings) {
-    console.log('initNavbar')
     $('#search-input').css('maxWidth', '140px')
     $('#global-nav .container-fluid, #global-nav .container-fluid .navbar-nav').removeClass('row');
     $('#navbarSupportedContent').removeClass('ps-2')
@@ -173,24 +172,32 @@ let mediaUp = (breakpoint) => {
       $('#btn-top, #navbar--btn-top').addClass('d-none')
     }
 
-    if (!mediaDown('sm')) {
-      $('.project--full .works__field-media img').on('click', e => {
+    if (!mediaDown('lg')) {
+      $('#image-gallery img').each((index, image) => {
+        $(image).attr('data-bp', image.src)
+        let a = $('<a/>').attr('href', image.src)
+        $(image).wrap(a)
+      })
+      $('#image-gallery img').on('click', e => {
         e.preventDefault();
-        let images = Array.from(
-            document.querySelectorAll('.works__field-media img')
-          ).map(img => {
-          return { src: img.src.replace('thumbnail', 'x_large') }
-        })
-        console.log(images)
         BigPicture({
           el: e.target,
-          gallery: images,
+          gallery: '#image-gallery',
           noLoader: true,
           animationStart: () => {
             $('#bp_container .bp-x').css({
               'width': '20px', 'height': '29px',
               'top': '43px', 'right': '42px'
             })
+            if (mediaUp('xl')) {
+              $('#bp_container .bp-x').css({
+                'top': '21px', 'right': '20px'
+              })
+              $('#bp_container .bp-x svg').css({
+                'width': '10px', 'height': '14px',
+              })
+              $('#bp_container .bp-lr svg').css('width', '15px')
+            }
             $('#bp_aud, #bp_container img, #bp_sv, #bp_vid').css({
               'maxHeight': '100%', 'maxWidth': '100%',
             })
