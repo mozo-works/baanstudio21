@@ -40,7 +40,7 @@ let mediaUp = (breakpoint) => {
         if (mediaDown('xl')) {
           $('#search-input').css('maxWidth', '70px')
         }
-        if (mediaDown('md')) {
+        if (mediaDown('lg')) {
           initNavbar(settings)
           if ($('.projects-browse').length > 0) {
             $('.projects-browse .row.pe-3').hide()
@@ -68,9 +68,10 @@ let mediaUp = (breakpoint) => {
           // 프로젝트 상세
           let projectFull = $('.project--full');
           if (projectFull.length > 0) {
-            $('#nav-work-types').removeClass('position-fixed')
-              .addClass('float-end').css('marginBottom', '-36px')
-              .prependTo($('#page--title'));
+            $('#nav-work-types').hide()
+            $('.works__field-work-type')
+              .removeClass('visually-hidden')
+              .addClass('mb-1')
           }
 
           // about
@@ -137,12 +138,6 @@ let mediaUp = (breakpoint) => {
     $('#navbarSupportedContent').removeClass('ps-2')
     $('#navbarSupportedContent li a').removeClass('ms-2')
     $('#navbarInner').css('minHeight', $(window).height() + 'px')
-  }
-
-  function undoNavbar(settings) {
-    $('#global-nav .container-fluid, #global-nav .container-fluid .navbar-nav').addClass('row');
-    $('#navbarSupportedContent').addClass('ps-2')
-    $('#navbarSupportedContent li a').addClass('ms-2')
   }
 
   $(function () {
