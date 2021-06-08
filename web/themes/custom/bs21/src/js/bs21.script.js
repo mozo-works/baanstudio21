@@ -15,7 +15,7 @@ let mediaUp = (breakpoint) => {
   Drupal.behaviors.scrollToTop = {
     attach: function (context) {
       $('#btn-top, #navbar--btn-top', context).once('btn-top').on('click', () => {
-        $("html, body, #navbarSupportedContent").animate({ scrollTop: "10px" })
+        $("html, body, #navbarSupportedContent").animate({ scrollTop: "0px" })
       })
     }
   }
@@ -182,6 +182,7 @@ let mediaUp = (breakpoint) => {
           el: e.target,
           gallery: '#image-gallery',
           noLoader: true,
+          loop: true,
           animationStart: () => {
             $('#bp_container .bp-x').css({
               'width': '20px', 'height': '29px',
