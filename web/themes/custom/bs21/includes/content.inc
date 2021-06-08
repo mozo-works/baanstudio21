@@ -81,7 +81,8 @@ function bs21_preprocess_paragraph(&$vars) {
     $items = $vars['content']['field_work_type']['#items'] ?? NULL;
     $count = (!empty($items)) ? count($items) : 0;
     if ($count > 0) {
-      $work_type = reset($vars['content']['field_work_type']['#object']->field_work_type->getValue());
+      $field_work_type = $vars['content']['field_work_type']['#object']->field_work_type->getValue();
+      $work_type = reset($field_work_type);
       $tid = $work_type['target_id'];
       foreach (range(1, $count) as $index) {
         $vars['content']['field_work_type']['#attributes'] = [

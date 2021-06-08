@@ -39,6 +39,9 @@
   #search-block {
     display: inline-block;
     max-width: 365px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   #search-input {

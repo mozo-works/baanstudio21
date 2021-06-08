@@ -15,37 +15,49 @@ body {
 
 .body--search {
   .block--bs21-primary-local-tasks,
+  .block--bs21-page-title,
   .block--bs21-content > h2,
+  .block--bs21-content > h3,
   #edit-basic label,
-  #edit-help-link {
+  #edit-help-link,
+  .search-advanced {
     display: none;
   }
   #edit-keys {
     all: unset;
+    width: 100%;
+    border-bottom: 1px solid #000;
   }
   #edit-submit {
     visibility: hidden;
   }
   .list-unstyled {
-    border-bottom: 1px dashed #ccc;
-    font-size: 12px;
-    line-height: 22px;
-    &:first-of-type {
-      border-top: 1px dashed #ccc;
-      padding-top: 11px;
-    }
-    @include media-breakpoint-up(md) {
-      font-size: 13px;
-      line-height: 23px;
-      &:first-of-type {
-        padding-top: 11.5px;
+    li {
+      padding: 11px 0;
+      font-size: 12px;
+      line-height: 22px;
+      border-bottom: 1px dashed #000;
+      p {
+        margin-bottom: 0px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding: 11.5px 0;
+        font-size: 13px;
+        line-height: 23px;
+      }
+      @include media-breakpoint-up(xxl) {
+        padding: 18px 0;
+        font-size: 16px;
+        line-height: 32px;
       }
     }
-    @include media-breakpoint-up(xxl) {
-      font-size: 16px;
-      line-height: 32px;
-      &:first-of-type {
-        padding-top: 18px;
+  }
+  .pagination {
+    display: none;
+    .page-item {
+      all: unset;
+      .page-link {
+        all: unset;
       }
     }
   }
@@ -301,10 +313,6 @@ body {
       display: inline-block;
       max-width: 314px;
     }
-  }
-
-  @media (min-width: 769px) {
-    margin-top: 133px;
   }
 
   @include media-breakpoint-up(xl) {

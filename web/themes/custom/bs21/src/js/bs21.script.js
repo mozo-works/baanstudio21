@@ -221,6 +221,18 @@ let mediaUp = (breakpoint) => {
       })
     }
 
+    // 검색 화면
+    if ($('#edit-keys').length > 0) {
+      $('#edit-keys').get(0).focus();
+      if (mediaDown('md')) {
+        $('.js-form-type-search').addClass('w-100')
+        $('#search-form').height('44px');
+      }
+      if (mediaUp('lg')) {
+        $('#search-form').hide();
+      }
+    }
+
   })
 
 })(jQuery, Drupal)
