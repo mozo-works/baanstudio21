@@ -309,18 +309,10 @@ body {
     margin-bottom: 30px;
     font-size: 13px;
     line-height: 23px;
-    .project--title {
-      display: inline-block;
-      max-width: 314px;
-    }
   }
 
   @include media-breakpoint-up(xl) {
     margin-top: -56px;
-    .project--title {
-      display: inline-block;
-      max-width: 50%;
-    }
     .border-bottom.ms-3.px-0 {
       margin-left: .7rem !important;
       .views-field-title * {
@@ -332,10 +324,6 @@ body {
 
   @include media-breakpoint-up(xxl) {
     margin-top: -45px;
-    .project--title {
-      display: inline-block;
-      max-width: 50%;
-    }
     .border-bottom.ms-3.px-0 {
       .views-field-title * {
         font-size: 16px;
