@@ -150,13 +150,15 @@ let mediaUp = (breakpoint) => {
         $('#search-block').addClass('d-none')
       }
     })
+
+    // 작업 유형 네비게이션
     if ($('#nav-work-types').length > 0) {
       // 클릭 시 active.
       $('#nav-work-types a').on('click', e => {
         $('#nav-work-types a').removeClass('active')
         $(e.currentTarget).addClass('active')
         e.preventDefault()
-        let target = $($(e.currentTarget).attr('href')).offset().top - $('#nav-work-types').offset().top
+        let target = $($(e.currentTarget).attr('href')).offset().top - $('#nav-work-types').position().top
         window.scrollTo(0, target)
       })
     }
