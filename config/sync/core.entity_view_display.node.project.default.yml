@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.project.field_year_month
     - node.type.project
   module:
+    - datetime
     - entity_reference_revisions
     - text
     - user
@@ -23,12 +24,12 @@ content:
   body:
     label: visually_hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_info:
-    weight: 1
+    weight: 2
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
@@ -42,7 +43,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_weight:
-    weight: 4
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -50,24 +51,32 @@ content:
     region: content
   field_works:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 4
     label: visually_hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
+  field_year_month:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   prevnext_next:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   prevnext_previous:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_year_month: true
   langcode: true
   links: true
