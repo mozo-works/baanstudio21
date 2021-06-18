@@ -132,12 +132,25 @@ let mediaUp = (breakpoint) => {
       })
     }
   }
+
   function initNavbar(settings) {
     $('#search-input').css('maxWidth', '140px')
     $('#global-nav .container-fluid, #global-nav .container-fluid .navbar-nav').removeClass('row');
     $('#navbarSupportedContent').removeClass('ps-2')
     $('#navbarSupportedContent li a').removeClass('ms-2')
     $('#navbarInner').css('minHeight', $(window).height() + 'px')
+  }
+
+  Drupal.behaviors.suffleFrontProjects = {
+    attach: (context, settings) => {
+      if (settings.path.isFront) {
+        let container = $('.card--project').closest('.row').get(0);
+        // https://stackoverflow.com/a/11972692
+        for (var i = container.children.length; i >= 0; i--) {
+          container.appendChild(container.children[Math.random() * i | 0]);
+        }
+      }
+    }
   }
 
   $(function () {
