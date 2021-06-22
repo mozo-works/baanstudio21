@@ -9,9 +9,6 @@ command:
       options:
         structure-tables-key: common
         skip-tables-key: common
-    sync:
-      options:
-        create-db: true
   core:
     rsync:
       options:
