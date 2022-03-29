@@ -18,12 +18,12 @@ plugin: 'views_block:projects-block_projects_browse_navbar'
 settings:
   id: 'views_block:projects-block_projects_browse_navbar'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '/projects/browse*'
     negate: false
+    pages: '/projects/browse*'

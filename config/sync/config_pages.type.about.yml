@@ -4,6 +4,7 @@ status: true
 dependencies: {  }
 id: about
 label: About
+token: false
 context:
   show_warning: true
   group:
@@ -14,4 +15,3 @@ menu:
   path: /admin/config/system/about
   weight: 1
   description: '사이트 소개 페이지입니다.'
-token: false

@@ -22,102 +22,19 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content overview'
-      cache:
-        type: tag
-      query:
-        type: views_query
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Filter
-          reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 50
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: false
-          sticky: true
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            field_year_month: field_year_month
-            status: status
-            changed: changed
-            operations: operations
-            field_weight: field_weight
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_year_month:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            status:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: false
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            operations:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_weight:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: true
-      row:
-        type: fields
+      title: 콘텐츠
       fields:
         node_bulk_form:
           id: node_bulk_form
           table: node
           field: node_bulk_form
+          entity_type: node
+          plugin_id: node_bulk_form
           label: ''
           exclude: false
           alter:
@@ -128,12 +45,13 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: node_bulk_form
-          entity_type: node
         title:
           id: title
           table: node_field_data
           field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: 제목
           exclude: false
           alter:
@@ -144,12 +62,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          entity_type: node
-          entity_field: title
           type: string
           settings:
             link_to_entity: true
-          plugin_id: field
         type:
           id: type
           table: node_field_data
@@ -157,6 +72,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: field
           label: '콘텐츠 형식'
           exclude: false
           alter:
@@ -212,14 +130,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: type
-          plugin_id: field
         name:
           id: name
           table: users_field_data
           field: name
           relationship: uid
+          entity_type: user
+          entity_field: name
+          plugin_id: field
           label: Author
           exclude: false
           alter:
@@ -230,14 +148,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: field
           type: user_name
-          entity_type: user
-          entity_field: name
         status:
           id: status
           table: node_field_data
           field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: field
           label: Status
           exclude: false
           alter:
@@ -251,15 +169,15 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
             format_custom_false: Unpublished
-          plugin_id: field
-          entity_type: node
-          entity_field: status
+            format_custom_true: Published
         changed:
           id: changed
           table: node_field_data
           field: changed
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
           label: Updated
           exclude: false
           alter:
@@ -275,9 +193,6 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
-          plugin_id: field
-          entity_type: node
-          entity_field: changed
         operations:
           id: operations
           table: node
@@ -285,6 +200,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: entity_operations
           label: Operations
           exclude: false
           alter:
@@ -327,7 +243,41 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: true
-          plugin_id: entity_operations
+      pager:
+        type: full
+        options:
+          items_per_page: 50
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Filter
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content overview'
+      cache:
+        type: tag
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          plugin_id: text_custom
+          empty: true
+          content: '콘텐츠가 없습니다.'
+      sorts: {  }
+      arguments: {  }
       filters:
         title:
           id: title
@@ -336,6 +286,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
           operator: contains
           value: ''
           group: 1
@@ -346,6 +299,8 @@ display:
             description: ''
             use_operator: false
             operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: title
             required: false
             remember: false
@@ -354,8 +309,6 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -368,9 +321,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
-          entity_type: node
-          entity_field: title
         type:
           id: type
           table: node_field_data
@@ -378,6 +328,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             all: all
@@ -414,9 +367,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: bundle
-          entity_type: node
-          entity_field: type
         status:
           id: status
           table: node_field_data
@@ -424,6 +374,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -434,14 +387,14 @@ display:
             description: ''
             use_operator: false
             operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: status
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: true
           group_info:
             label: 'Published status'
@@ -462,9 +415,6 @@ display:
                 title: Unpublished
                 operator: '='
                 value: '0'
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
         langcode:
           id: langcode
           table: node_field_data
@@ -472,6 +422,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
           operator: in
           value: {  }
           group: 1
@@ -482,6 +435,8 @@ display:
             description: ''
             use_operator: false
             operator: langcode_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: langcode
             required: false
             remember: false
@@ -491,8 +446,6 @@ display:
               anonymous: '0'
               administrator: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -505,51 +458,99 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: language
-          entity_type: node
-          entity_field: langcode
         status_extra:
           id: status_extra
           table: node_field_data
           field: status_extra
+          entity_type: node
+          plugin_id: node_status
           operator: '='
           value: false
-          plugin_id: node_status
           group: 1
-          entity_type: node
           expose:
             operator_limit_selection: false
             operator_list: {  }
-      sorts: {  }
-      title: 콘텐츠
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          empty: true
-          content: '콘텐츠가 없습니다.'
-          plugin_id: text_custom
-      arguments: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            field_year_month: field_year_month
+            status: status
+            changed: changed
+            operations: operations
+            field_weight: field_weight
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_year_month:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            status:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            changed:
+              sortable: false
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: priority-low
+            operations:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_weight:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: false
+          sticky: true
+          summary: ''
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
       relationships:
         uid:
           id: uid
           table: node_field_data
           field: uid
           admin_label: author
-          required: true
           plugin_id: standard
+          required: true
       show_admin_links: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       display_extenders: {  }
-    display_plugin: default
-    display_title: Master
-    id: default
-    position: 0
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -558,32 +559,32 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      max-age: 0
       tags: {  }
   page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
     display_options:
+      display_extenders: {  }
       path: admin/content/node
       menu:
         type: tab
         title: 콘텐츠
         description: ''
-        expanded: false
-        parent: ''
         weight: -10
-        context: '0'
+        expanded: false
         menu_name: admin
+        parent: ''
+        context: '0'
       tab_options:
         type: normal
         title: 콘텐츠
         description: 'Find and manage content'
-        menu_name: admin
         weight: -10
-      display_extenders: {  }
-    display_plugin: page
-    display_title: Page
-    id: page_1
-    position: 1
+        menu_name: admin
     cache_metadata:
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -592,38 +593,22 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      max-age: 0
       tags: {  }
   projects:
-    display_plugin: page
     id: projects
     display_title: 프로젝트
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      path: admin/content/project
-      menu:
-        type: 'default tab'
-        title: 프로젝트
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: main
       title: 프로젝트
-      defaults:
-        title: false
-        fields: false
-        filters: false
-        filter_groups: false
-        sorts: false
       fields:
         title:
           id: title
           table: node_field_data
           field: title
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: 제목
           exclude: false
           alter:
@@ -634,12 +619,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          entity_type: node
-          entity_field: title
           type: string
           settings:
             link_to_entity: true
-          plugin_id: field
         field_year_month:
           id: field_year_month
           table: node__field_year_month
@@ -647,6 +629,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 년도
           exclude: false
           alter:
@@ -703,7 +686,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         status:
           id: status
           table: node_field_data
@@ -711,6 +693,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: field
           label: 상태
           exclude: false
           alter:
@@ -756,8 +741,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: 공개
             format_custom_false: 비공개
+            format_custom_true: 공개
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -768,9 +753,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-          entity_type: node
-          entity_field: status
         changed:
           id: changed
           table: node_field_data
@@ -778,6 +760,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: field
           label: 수정시간
           exclude: false
           alter:
@@ -835,9 +820,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-          entity_type: node
-          entity_field: changed
         operations:
           id: operations
           table: node
@@ -845,6 +827,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: entity_operations
           label: 작업
           exclude: false
           alter:
@@ -887,7 +870,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: true
-          plugin_id: entity_operations
         field_weight:
           id: field_weight
           table: node__field_weight
@@ -895,6 +877,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: weight_selector
           label: 순서
           exclude: false
           alter:
@@ -937,7 +920,20 @@ display:
           empty_zero: false
           hide_alter_empty: true
           range: '1000'
-          plugin_id: weight_selector
+      sorts:
+        field_weight_value:
+          id: field_weight_value
+          table: node__field_weight
+          field: field_weight_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: field_weight_value
+          exposed: false
       filters:
         type:
           id: type
@@ -946,6 +942,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           operator: in
           value:
             project: project
@@ -980,18 +979,15 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: bundle
-          entity_type: node
-          entity_field: type
         status_extra:
           id: status_extra
           table: node_field_data
           field: status_extra
+          entity_type: node
+          plugin_id: node_status
           operator: '='
           value: false
-          plugin_id: node_status
           group: 1
-          entity_type: node
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -999,19 +995,24 @@ display:
         operator: AND
         groups:
           1: AND
-      sorts:
-        field_weight_value:
-          id: field_weight_value
-          table: node__field_weight
-          field: field_weight_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
+      defaults:
+        title: false
+        fields: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+      path: admin/content/project
+      menu:
+        type: 'default tab'
+        title: 프로젝트
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
       tab_options:
         type: tab
         title: 프로젝트

@@ -15,29 +15,29 @@ id: work_picture
 label: '작업 사진'
 image_style_mappings:
   -
-    breakpoint_id: default.xl
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: x_large
-  -
-    breakpoint_id: default.lg
+    breakpoint_id: default.xl
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: large
-  -
-    breakpoint_id: default.md
+    breakpoint_id: default.lg
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: medium
-  -
-    breakpoint_id: default.sm
+    breakpoint_id: default.md
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: small
-  -
-    breakpoint_id: default.xs
+    breakpoint_id: default.sm
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: x_small
+    breakpoint_id: default.xs
+    multiplier: 1x
 breakpoint_group: bs21
 fallback_image_style: thumbnail

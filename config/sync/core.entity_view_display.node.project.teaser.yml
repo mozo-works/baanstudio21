@@ -22,20 +22,20 @@ mode: teaser
 content:
   field_info_list:
     type: text_default
-    weight: 1
-    region: content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_works:
     type: entity_reference_revisions_entity_view
-    weight: 0
-    region: content
     label: visually_hidden
     settings:
       view_mode: preview
       link: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   body: true
   field_info: true

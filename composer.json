@@ -41,7 +41,7 @@
     "require": {
         "ckeditor-plugin/colorbutton": "*",
         "ckeditor-plugin/panelbutton": "*",
-        "composer/installers": "^1.9",
+        "composer/installers": "^2",
         "cweagans/composer-patches": "^1.7",
         "drupal/colorbutton": "^1.2",
         "drupal/components": "^2.4",
@@ -50,9 +50,9 @@
         "drupal/core-recommended": "^9.3",
         "drupal/gin": "^3.0@beta",
         "drupal/gin_login": "^1.2",
-        "drupal/paragraphs": "^1.12",
+        "drupal/paragraphs": "^1.13",
         "drupal/prevnext": "^2.0",
-        "drupal/radix": "^4.10",
+        "drupal/radix": "^4",
         "drupal/weight": "^3.2",
         "drush/drush": "^10"
     },
@@ -76,7 +76,15 @@
         "start": [
             "@env",
             "COMPOSER_PROCESS_TIMEOUT=0 drush rs"
-        ]
+        ],
+        "pull:files": "drush -y -v rsync @prod:%files @local:%files",
+        "pull:db": "drush -y -v sql:sync @prod @local",
+        "pull": [
+            "@pull:files",
+            "@pull:db"
+        ],
+        "prod:status": "drush -v @prod ssh 'cd ../ && drush st && drush cst && git status && composer outdated --direct && du -sch'",
+        "prod:deploy": "drush -v @prod ssh 'git pull && composer update -o && drush deploy'"
     },
     "extra": {
         "drupal-scaffold": {
@@ -123,6 +131,6 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/devel": "^4.1",
-        "kint-php/kint": "^3.3"
+        "kint-php/kint": "^4.1"
     }
 }

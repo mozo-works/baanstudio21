@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: ko
 uuid: 1f39379a-9bbe-43b3-9676-7af09d85102e
 name: 'BAAN Studio'
 mail: admin@example.com
@@ -8,7 +11,4 @@ page:
   front: /projects
 admin_compact_mode: false
 weight_select_max: 100
-langcode: ko
 default_langcode: ko
-_core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

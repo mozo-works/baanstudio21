@@ -19,13 +19,13 @@ mode: media_library
 content:
   thumbnail:
     type: image
-    weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: large
       image_link: content
+      image_style: large
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   field_image_description: true

@@ -23,38 +23,39 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 4
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   field_info:
+    type: text_textarea
     weight: 3
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_info_list:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 1
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_weight:
+    type: weight_selector
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: weight_selector
-    region: content
   field_works:
     type: paragraphs
     weight: 5
+    region: content
     settings:
       title: 작업물
       title_plural: 작업물
@@ -70,16 +71,15 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: '0'
     third_party_settings: {  }
-    region: content
   field_year_month:
+    type: datetime_datelist
     weight: 1
+    region: content
     settings:
+      increment: 15
       date_order: YMD
       time_type: none
-      increment: 15
     third_party_settings: {  }
-    type: datetime_datelist
-    region: content
   title:
     type: string_textfield
     weight: 0
