@@ -1,10 +1,10 @@
 # https://raw.githubusercontent.com/drush-ops/drush/10.x/examples/example.site.yml
 
 local:
-  uri: http://localhost:8080
-  root: /var/www/baanstudio21/web
+  uri: http://localhost:8888
+  root: /home/ubuntu/projects/baanstudio21/web
   paths:
-    - files: sites/default/files
+    files: sites/default/files
   env-vars:
     DRUPAL_ENV: dev
 
@@ -14,6 +14,6 @@ prod:
   root: ${env.PROD_ROOT}
   uri: ${env.PROD_URI}
   ssh:
-    options: '-i ${env.PROD_PEM_KEY}'
+    options: -i ${env.PROD_PEM_KEY}
   paths:
-    - files: sites/default/files
+    files: sites/default/files

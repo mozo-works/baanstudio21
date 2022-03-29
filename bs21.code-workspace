@@ -1,10 +1,6 @@
 {
   "folders": [
     {
-      "name": "themes-radix",
-      "path": "web/themes/contrib/radix"
-    },
-    {
       "name": "modules-custom",
       "path": "web/modules/custom"
     },
@@ -29,6 +25,25 @@
       "path": "."
     }
   ],
+  "extensions": {
+    "recommendations": [
+      "GitHub.vscode-pull-request-github",
+      "mrmlnc.vscode-duplicate",
+      "editorconfig.editorconfig",
+      "ikappas.phpcs",
+      "neilbrayfield.php-docblocker",
+      "dmitrydorofeev.empty-indent",
+      "bmewburn.vscode-intelephense-client",
+      "marcostazi.vs-code-drupal",
+      "bbeversdorf.drupal-check",
+      "mblode.twig-language-2",
+      "dssiqueira.drupal-8-snippets",
+      "tsega.drupal-8-javascript-snippets",
+      "tsega.drupal-8-twig-snippets",
+      "humao.rest-client",
+      "wmaurer.change-case"
+    ]
+  },
   "settings": {
     "breadcrumbs.enabled": true,
     "css.validate": true,
@@ -60,7 +75,6 @@
     "files.insertFinalNewline": true,
     "html.format.enable": true,
     "html.format.wrapLineLength": 80,
-    "telemetry.enableTelemetry": false,
     /* Empty Indent */
     "emptyIndent.removeIndent": true,
     "emptyIndent.highlightIndent": false,
@@ -73,19 +87,14 @@
     "php-docblocker.gap": true,
     "php-docblocker.useShortNames": true,
     "phpcs.enable": true,
-    "phpcs.executablePath": "/home/vagrant/.config/composer/vendor/bin/phpcs",
+    "phpcs.executablePath": "/home/ubuntu/.config/composer/vendor/bin/phpcs",
     "phpcs.standard": "Drupal,DrupalPractice",
     "remote.autoForwardPorts": false,
     "remote.SSH.defaultForwardedPorts": [
       {
-        "localPort": 8080,
-        "remotePort": 80,
-        "name": "apache2"
-      },
-      {
-        "localPort": 3000,
-        "remotePort": 3000,
-        "name": "webpack-dev"
+        "localPort": 8888,
+        "remotePort": 8888,
+        "name": "drush-rs"
       }
     ]
   }
