@@ -1,15 +1,7 @@
 uuid: 15b8b143-f5e8-4843-981f-83f74cce95aa
 langcode: ko
 status: true
-dependencies:
-  config:
-    - filter.format.restricted_html
-  module:
-    - contact
-    - filter
-    - media
-    - search
-    - system
+dependencies: {  }
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
 id: anonymous
@@ -17,6 +9,7 @@ label: '익명 사용자'
 weight: 0
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'

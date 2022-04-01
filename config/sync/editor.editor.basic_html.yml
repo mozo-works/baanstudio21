@@ -52,7 +52,7 @@ settings:
     stylescombo:
       styles: ''
     colorbutton:
-      colors: '0000ff,800080,ff0000,fff,000,1155CC,0B3B8E,3D85C6,0086FF,0fae00,2C1DFF,D59579,065535,c39797,000080,990000,00ff00'
+      colors: '0000ff,800080,ff0000,fff,000'
 image_upload:
   status: true
   scheme: public
