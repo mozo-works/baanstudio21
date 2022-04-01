@@ -84,7 +84,7 @@
             "@pull:db"
         ],
         "prod:status": "drush -v @prod ssh 'cd ../ && drush st && drush cst && git status && composer outdated --direct && du -sch'",
-        "prod:deploy": "drush -v @prod ssh 'cd ../ && git pull && composer update -o && drush deploy'"
+        "prod:deploy": "drush -v @prod ssh 'cd ../ && git pull && composer update -o && drush deploy && git checkout -- ./'"
     },
     "extra": {
         "drupal-scaffold": {
