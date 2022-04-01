@@ -10,9 +10,9 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "bigpicture": "^2.5.3",
     "bootstrap": "^5.0.1",
-    "jquery": "^3.6.0",
-    "bigpicture": "^2.5.3"
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",

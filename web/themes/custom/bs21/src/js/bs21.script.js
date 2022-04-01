@@ -266,6 +266,13 @@ let mediaUp = (breakpoint) => {
         $('#search-form').hide();
       }
     }
+
+    // 비공개 노드 링크 제거
+    if ($('.unpublished').length > 0) {
+      $('.unpublished').each( (index, node) => {
+        $(node).find('.field-content').html($(node).find('a').html());
+      });
+    }
   })
 
 })(jQuery, Drupal)
