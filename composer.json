@@ -72,11 +72,8 @@
         }
     },
     "scripts": {
-        "env": "export $(grep -v '^#' .env | xargs)",
-        "start": [
-            "@env",
-            "COMPOSER_PROCESS_TIMEOUT=0 drush rs"
-        ],
+        "env": "[ ! -f .env ] || export $(grep -v '^#' .env | xargs)",
+        "start": "[ ! -f .env ] || export $(grep -v '^#' .env | xargs) && COMPOSER_PROCESS_TIMEOUT=0 drush rs",
         "pull:files": "drush -y -v rsync @prod:%files @local:%files",
         "pull:db": "drush -y -v sql:sync @prod @local",
         "pull": [
