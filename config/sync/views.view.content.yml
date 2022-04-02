@@ -246,12 +246,24 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 50
+          offset: 0
+          items_per_page: 0
+          total_pages: null
+          id: 0
           tags:
             next: 'Next ›'
             previous: '‹ Previous'
             first: '« First'
             last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -567,7 +579,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/content/node
+      path: admin/content
       menu:
         type: tab
         title: 콘텐츠
@@ -1005,16 +1017,16 @@ display:
       display_extenders: {  }
       path: admin/content/project
       menu:
-        type: 'default tab'
+        type: tab
         title: 프로젝트
         description: ''
         weight: 0
         expanded: false
-        menu_name: main
-        parent: ''
+        menu_name: admin
+        parent: system.admin_content
         context: '0'
       tab_options:
-        type: tab
+        type: none
         title: 프로젝트
         description: ''
         weight: 0
