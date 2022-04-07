@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Component\Utility\Html;
+
 /**
  * @file
  * Theme and preprocess functions for views.
@@ -44,4 +46,6 @@ function bs21_preprocess_views_view(&$vars) {
       ],
     ];
   }
+  // Add html id.
+  $vars['attributes']['id'] = Html::cleanCssIdentifier("${vars['id']}--${vars['display_id']}");
 }

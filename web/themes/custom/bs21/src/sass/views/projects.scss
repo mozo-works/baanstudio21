@@ -1,0 +1,10 @@
+#projects {
+  // images: projects/browse
+  // &--page-browse { }
+  // text: projects/browse
+  &--block-projects-browse-navbar {
+    .unpublished {
+      color: rgba(black, 0.6);
+    }
+  }
+}
