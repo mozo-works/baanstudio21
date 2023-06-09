@@ -46,15 +46,15 @@
         "drupal/colorbutton": "^1.2",
         "drupal/components": "^2.4",
         "drupal/config_pages": "^2.9",
-        "drupal/core-composer-scaffold": "^9.3",
-        "drupal/core-recommended": "^9.3",
-        "drupal/gin": "^3.0@beta",
-        "drupal/gin_login": "^1.2",
+        "drupal/core-composer-scaffold": "^9.5",
+        "drupal/core-recommended": "^9.5",
+        "drupal/gin": "^3.0",
+        "drupal/gin_login": "^2",
         "drupal/paragraphs": "^1.13",
         "drupal/prevnext": "^2.0",
         "drupal/radix": "^4",
         "drupal/weight": "^3.2",
-        "drush/drush": "^10"
+        "drush/drush": "^11"
     },
     "conflict": {
         "drupal/drupal": "*"

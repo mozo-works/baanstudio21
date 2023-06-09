@@ -47,10 +47,6 @@ settings:
           items:
             - Source
   plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
     colorbutton:
       colors: '0000ff,800080,ff0000,fff,000'
 image_upload:
