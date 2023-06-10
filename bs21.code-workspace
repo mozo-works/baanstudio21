@@ -1,24 +1,12 @@
 {
   "folders": [
     {
-      "name": "modules-custom",
-      "path": "web/modules/custom"
+      "name": "modules-custom-bs21-site",
+      "path": "web/modules/custom/bs21_site"
     },
     {
       "name": "themes-custom-bs21",
       "path": "web/themes/custom/bs21"
-    },
-    {
-      "name": "bs21-includes",
-      "path": "web/themes/custom/bs21/includes"
-    },
-    {
-      "name": "bs21-templates",
-      "path": "web/themes/custom/bs21/templates"
-    },
-    {
-      "name": "bs21-src",
-      "path": "web/themes/custom/bs21/src"
     },
     {
       "name": "project-root",

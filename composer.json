@@ -43,18 +43,21 @@
         "ckeditor-plugin/panelbutton": "*",
         "composer/installers": "^2",
         "cweagans/composer-patches": "^1.7",
+        "drupal/color": "^1.0",
         "drupal/colorbutton": "^1.2",
-        "drupal/components": "^2.4",
+        "drupal/components": "^3.0@beta",
         "drupal/config_pages": "^2.9",
-        "drupal/core-composer-scaffold": "^9.5",
-        "drupal/core-recommended": "^9.5",
+        "drupal/core-composer-scaffold": "^10.0",
+        "drupal/core-recommended": "^10.0",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^2",
         "drupal/paragraphs": "^1.13",
         "drupal/prevnext": "^2.0",
+        "drupal/quickedit": "^1.0",
         "drupal/radix": "^4",
+        "drupal/rdf": "^2.1",
         "drupal/weight": "^3.2",
-        "drush/drush": "^11"
+        "drush/drush": "^12"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -127,7 +130,7 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/devel": "^4.1",
-        "kint-php/kint": "^4.1"
+        "drupal/devel": "^5.1",
+        "kint-php/kint": "^5.0"
     }
 }

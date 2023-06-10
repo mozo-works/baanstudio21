@@ -9,6 +9,7 @@ index 00f04c1..d471c56 100644
 -    $nodes = $query->condition('status', NodeInterface::PUBLISHED)
 +
 +    $query->condition('status', NodeInterface::PUBLISHED)
+       ->accessCheck(FALSE)
        ->condition('type', $bundle)
        ->condition('langcode', $langcode)
        ->addMetaData('type', $bundle)
@@ -28,6 +29,6 @@ index 00f04c1..d471c56 100644
 +    }
 +
 +    $nodes = $query->addTag('prev_next_nodes_type')->execute();
- 
+
      return array_values($nodes);
    }

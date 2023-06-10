@@ -52,7 +52,7 @@ function bs21_preprocess_node(&$vars) {
             $options = ['attributes' => ['class' => 'active']];
             $link['#options'] = $options;
           }
-          $work_types['#items'][]['#children'] = render($link);
+          $work_types['#items'][]['#children'] = \Drupal::service('renderer')->render($link);
           if ($index === 0) {
             $link['#attributes']['class'][] = 'active';
           }
