@@ -9,11 +9,9 @@ local:
     DRUPAL_ENV: dev
 
 prod:
-  host: ${env.PROD_HOST}
-  user: ${env.PROD_USER}
-  root: ${env.PROD_ROOT}
-  uri: ${env.PROD_URI}
-  ssh:
-    options: -i ${env.PROD_PEM_KEY}
+  host: baan21
+  root: /var/www/baanstudio21
+  uri: https://baanstudio.com
   paths:
     files: sites/default/files
+    drush-script: /var/www/baanstudio21/vendor/bin/drush
