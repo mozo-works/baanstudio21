@@ -54,7 +54,7 @@
         "drupal/paragraphs": "^1.13",
         "drupal/prevnext": "^2.0",
         "drupal/quickedit": "^1.0",
-        "drupal/radix": "^4",
+        "drupal/radix": "dev-4.x",
         "drupal/rdf": "^2.1",
         "drupal/weight": "^3.2",
         "drush/drush": "^12"
@@ -124,7 +124,10 @@
         "enable-patching": true,
         "patches": {
             "drupal/prevnext": {
-                "prevnext_respect_weight_field": "./patches/prevnext_respect_weight_field.patch"
+                "https://www.drupal.org/project/prevnext/issues/3341627": "https://www.drupal.org/files/issues/2023-02-28/prevnext-accessCheck_missing-3341627-8.patch"
+            },
+            "drupal/radix": {
+                "https://www.drupal.org/project/radix/issues/3346601": "https://www.drupal.org/files/issues/2023-03-07/radix-spaceless-3346601-2.patch"
             }
         }
     },

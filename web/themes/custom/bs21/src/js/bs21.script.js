@@ -14,7 +14,7 @@ let mediaUp = (breakpoint) => {
   'use strict'
   Drupal.behaviors.scrollToTop = {
     attach: function (context) {
-      $('#btn-top, #navbar--btn-top', context).once('btn-top').on('click', () => {
+      $(once('btn-top', '#btn-top, #navbar--btn-top', context)).on('click', () => {
         $("html, body, #navbarSupportedContent").animate({ scrollTop: "0px" })
       })
     }
@@ -29,7 +29,7 @@ let mediaUp = (breakpoint) => {
   }
   Drupal.behaviors.fixByScreen = {
     attach: function (context, settings) {
-      $('body', context).once('responsive').each(() => {
+      $(once('responsive', 'body', context)).each(() => {
         if (mediaDown('mbp')) {
           $('#search-input').css('maxWidth', '130px')
         }

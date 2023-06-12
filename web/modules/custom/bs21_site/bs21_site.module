@@ -6,10 +6,31 @@
  */
 
 use Drupal\config_pages\Entity\ConfigPages;
+use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Return config for about page.
  */
 function bs21_site_config($id) {
   return ConfigPages::config($id);
+}
+
+/**
+ * Implementation of hook_query_alter().
+ */
+function bs21_site_query_alter(AlterableInterface $query) {
+  if ($query->hasTag('prev_next_nodes_type')) {
+    // Add sort by weight field to query if weight module and field exists.
+    if (\Drupal::service('module_handler')->moduleExists('weight')) {
+      $bundle = $query->getMetaData('type');
+      $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions('node', $bundle);
+      $field = array_filter($fields, fn($field) => $field->getType() == 'weight');
+      if ($weight_field_key = array_key_first($field)) {
+        $query->leftJoin('node__' . $weight_field_key, 'nfw', '"nfw"."entity_id" = "node_field_data"."nid"');
+        $query->orderBy('nfw.' . $weight_field_key . '_value' , 'ASC');
+      }
+    }
+  }
+
 }

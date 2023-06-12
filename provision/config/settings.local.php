@@ -28,8 +28,8 @@ $settings['trusted_host_patterns'] = [
 
 // $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/theme-dev.services.yml';
 
-// $config['system.performance']['css']['preprocess'] = FALSE;
-// $config['system.performance']['js']['preprocess'] = FALSE;
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
 // $settings['cache']['bins']['render'] = 'cache.backend.null';
 // $settings['cache']['bins']['page'] = 'cache.backend.null';
 // $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
