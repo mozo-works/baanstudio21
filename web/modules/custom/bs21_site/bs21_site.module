@@ -34,3 +34,12 @@ function bs21_site_query_alter(AlterableInterface $query) {
   }
 
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function bs21_site_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'media_library_add_form_upload') {
+    $form['#prefix'] .= '<a href="#">.</a><br><br>';
+  }
+}
