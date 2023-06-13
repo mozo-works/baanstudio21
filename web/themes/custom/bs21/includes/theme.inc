@@ -45,7 +45,11 @@ function is_project_page($vars) {
  */
 function bs21_preprocess_html(&$vars) {
   $path_args = explode('/', ltrim(\Drupal::service('path.current')->getPath(), '/'));
-  $vars['attributes']['class'] = theme_get_suggestions($path_args, 'body', '--');
+  $vars['attributes']['class'][] = theme_get_suggestions($path_args, 'body', '--');
+  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $vars['attributes']['class'][] = 'not-admin';
+  }
+
 }
 
 /**
