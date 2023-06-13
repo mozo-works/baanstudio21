@@ -11,6 +11,9 @@
       @include media-breakpoint-down(sm) {
         margin-bottom: 32px;
       }
+      a {
+        color: #2980b9;
+      }
     }
     #image-gallery img {
       margin-bottom: 1.5rem;

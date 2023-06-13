@@ -14,8 +14,10 @@ $databases['default']['default'] = [
   'prefix' => 'drupal_',
   'host' => 'localhost',
   'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
+  'init_commands' => [
+    'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+  ],
 ];
 
 $settings['hash_salt'] = 'vNYSZt52CdlIsneqCs6ZeYsxJnnlFcqId4aBHfKcJkmupzaEX38SCTD4b_Bh4SdzjnTBjry0Gg';

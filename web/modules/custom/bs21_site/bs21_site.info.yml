@@ -1,6 +1,5 @@
 name: bs21_site
 type: module
-description: The description.
+description: Provide site related pages and functions.
 package: Custom
-core: 8.x
 core_version_requirement: "^9.4 || ^10"
