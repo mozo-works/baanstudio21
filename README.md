@@ -61,3 +61,14 @@ md: > 768px => medium:1000x750
 lg: > 992px => large:1200x900
 xlg:>1200px => x_large:2400x1800
 ```
+
+# upgrade to 10.2
+
+```shell
+drush eval "\Drupal::service('update.post_update_registry')->registerInvokedUpdates(['image_post_update_image_loading_attribute', 'image_post_update_image_loading_attribute']);"
+drush eval "\Drupal::service('update.post_update_registry')->registerInvokedUpdates(['system_post_update_enable_provider_database_driver', 'system_post_update_enable_provider_database_driver']);"
+drush eval "\Drupal::service('update.post_update_registry')->registerInvokedUpdates(['views_post_update_provide_revision_table_relationship', 'views_post_update_provide_revision_table_relationship']);"
+drush eval "\Drupal::service('update.post_update_registry')->registerInvokedUpdates(['views_post_update_image_lazy_load', 'views_post_update_image_lazy_load']);"
+drush updb -y && drush cr
+drush cim -y
+```

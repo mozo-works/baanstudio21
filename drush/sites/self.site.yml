@@ -2,7 +2,7 @@
 
 local:
   uri: http://localhost:8888
-  root: /home/ubuntu/projects/baanstudio21/web
+  root: /home/ubuntu/baanstudio21/web
   paths:
     files: sites/default/files
   env-vars:

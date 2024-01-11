@@ -8,9 +8,8 @@ module:
   block_content: 0
   breakpoint: 0
   bs21_site: 0
-  ckeditor: 0
+  ckeditor5: 0
   color: 0
-  colorbutton: 0
   components: 0
   config: 0
   config_pages: 0
@@ -26,6 +25,7 @@ module:
   file: 0
   filter: 0
   gin_login: 0
+  gin_toolbar: 0
   help: 0
   history: 0
   image: 0
@@ -40,9 +40,9 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  panelbutton: 0
   path: 0
   path_alias: 0
+  phpass: 0
   prevnext: 0
   quickedit: 0
   rdf: 0
@@ -54,7 +54,6 @@ module:
   text: 0
   toolbar: 0
   tour: 0
-  update: 0
   user: 0
   views_ui: 0
   weight: 0

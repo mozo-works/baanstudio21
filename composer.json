@@ -12,35 +12,9 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/colorbutton",
-                "version": "4.11.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/colorbutton/releases/colorbutton_4.11.1.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/panelbutton",
-                "version": "4.11.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/panelbutton/releases/panelbutton_4.11.1.zip",
-                    "type": "zip"
-                }
-            }
         }
     ],
     "require": {
-        "ckeditor-plugin/colorbutton": "*",
-        "ckeditor-plugin/panelbutton": "*",
         "composer/installers": "^2",
         "cweagans/composer-patches": "^1.7",
         "drupal/color": "^1.0",
@@ -120,15 +94,6 @@
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
-        },
-        "enable-patching": true,
-        "patches": {
-            "drupal/prevnext": {
-                "https://www.drupal.org/project/prevnext/issues/3341627": "https://www.drupal.org/files/issues/2023-02-28/prevnext-accessCheck_missing-3341627-8.patch"
-            },
-            "drupal/radix": {
-                "https://www.drupal.org/project/radix/issues/3346601": "https://www.drupal.org/files/issues/2023-03-07/radix-spaceless-3346601-2.patch"
-            }
         }
     },
     "require-dev": {

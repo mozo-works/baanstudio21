@@ -23,7 +23,7 @@ libraries:
 libraries-override:
   radix/bootstrap: false
 
-ckeditor_stylesheets:
+ckeditor5-stylesheets:
   - assets/css/bs21.style.css
 
 components:
