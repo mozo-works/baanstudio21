@@ -6,7 +6,7 @@ local:
   paths:
     files: sites/default/files
   env-vars:
-    DRUPAL_ENV: dev
+    DRUPAL_ENV: developement
 
 prod:
   host: baan21
@@ -15,3 +15,6 @@ prod:
   paths:
     files: sites/default/files
     drush-script: /var/www/baanstudio21/vendor/bin/drush
+  env-vars:
+    PATH: /usr/bin:/usr/local/bin:/var/www/baanstudio21/vendor/bin/
+    DRUPAL_ENV: production
